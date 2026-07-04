@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <meta charset="ISO-8859-1">
+
+    <title>Refine Bonus</title>
+	<link rel="icon" type="image/x-icon" href="logo.png">
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/fomantic-ui@2.9.4/dist/semantic.min.css">
+
+	<script src="https://cdn.jsdelivr.net/npm/fomantic-ui@2.9.4/dist/semantic.min.js"></script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+
+	<script src="https://cdn.jsdelivr.net/npm/chart.js@3.0.0/dist/chart.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
+</html>
+<style>
+	@font-face {
+		font-family: headerFont;
+		src: url(ArtineBold-nA4d4.ttf);
+	}
+	.ui.huge.header {
+		font-family: headerFont;
+	}
+</style>
+<body>
+    <div class="ui padded stackable grid">
+		<div class="row">
+			<div class="column">
+				<h2 class="ui huge header"><em data-emoji=":hammer_pick:" class="small"></em>Refine Bonus</h2>
+
+				<div class="ui floating info message">
+					<p>This page contains information about <b>Refine Bonus</b>.</p>
+				</div>
+
+				<h4 class="ui top attached header"><em data-emoji=":question:" class="small"></em>HOW IT WORKS?</h4>
+				<div class="ui attached segment">
+					<div class="ui circular ordered stackable steps">
+						<div class="step">
+							<div class="content">
+								<div class="title"><em data-emoji=":hammer:" class="small"></em>Refine</div>
+								<div class="description">Weapon & Armor Set</div>
+							</div>
+						</div>
+						<div class="step">
+							<div class="content">
+								<div class="title"><em data-emoji=":eight:" class="small"></em>+8 Refine</div>
+								<div class="description">+8 Bonus Activate</div>
+							</div>
+						</div>
+						<div class="step">
+							<div class="content">
+								<div class="title"><em data-emoji=":nine:" class="small"></em>+9 Refine</div>
+								<div class="description">+9 Bonus Activate</div>
+							</div>
+						</div>
+						<div class="step">
+							<div class="content">
+								<div class="title"><em data-emoji=":one:" class="small"></em><em data-emoji=":zero:" class="small"></em>+10 Refine</div>
+								<div class="description">+10 Bonus Activate</div>
+							</div>
+						</div>
+					</div>
+				</div><br>
+
+				<h4 class="ui top attached header"><em data-emoji=":eight:" class="small"></em>+8 REFINE</h4>
+				<div class="ui attached segment">
+					<table class="ui two column celled stacking center aligned table">
+						<thead>
+							<tr>
+								<th>BONUS</th>
+								<th>REQUIREMENTS</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>
+									<div class="ui list">
+										<div class="item"><b>Max HP:</b> +5%</div>
+										<div class="item"><b>Max SP:</b> +5%</div>
+										<div class="item"><b>ATK %:</b> +2%</div>
+										<div class="item"><b>MATK %:</b> +2%</div>
+									</div>
+								</td>
+								<td>
+									<div class="ui list">
+										<div class="item"><b>+8</b> Weapon</div>
+										<div class="item"><b>+8</b> Armor</div>
+										<div class="item"><b>+8</b> Shield</div>
+										<div class="item"><b>+8</b> Manteau</div>
+										<div class="item"><b>+8</b> Shoes</div>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div><br>
+
+				<h4 class="ui top attached header"><em data-emoji=":nine:" class="small"></em>+9 REFINE</h4>
+				<div class="ui attached segment">
+					<table class="ui two column celled stacking center aligned table">
+						<thead>
+							<tr>
+								<th>BONUS</th>
+								<th>REQUIREMENTS</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>
+									<div class="ui list">
+										<div class="item"><b>Max HP:</b> +10%</div>
+										<div class="item"><b>Max SP:</b> +10%</div>
+										<div class="item"><b>ATK %:</b> +5%</div>
+										<div class="item"><b>MATK %:</b> +5%</div>
+										<div class="item"><b>All Element Resistance %:</b> +1%</div>
+									</div>
+								</td>
+								<td>
+									<div class="ui list">
+										<div class="item"><b>+9</b> Weapon</div>
+										<div class="item"><b>+9</b> Armor</div>
+										<div class="item"><b>+9</b> Shield</div>
+										<div class="item"><b>+9</b> Manteau</div>
+										<div class="item"><b>+9</b> Shoes</div>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+
+				<h4 class="ui top attached header"><em data-emoji=":one:" class="small"></em><em data-emoji=":zero:" class="small"></em>+10 REFINE</h4>
+				<div class="ui attached segment">
+					<table class="ui two column celled stacking center aligned table">
+						<thead>
+							<tr>
+								<th>BONUS</th>
+								<th>REQUIREMENTS</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>
+									<div class="ui list">
+										<div class="item"><b>All Stats:</b> +10</div>
+										<div class="item"><b>Max HP:</b> +20%</div>
+										<div class="item"><b>Max SP:</b> +20%</div>
+										<div class="item"><b>ATK %:</b> +7%</div>
+										<div class="item"><b>MATK %:</b> +7%</div>
+										<div class="item"><b>All Element Resistance %:</b> +2%</div>
+									</div>
+								</td>
+								<td>
+									<div class="ui list">
+										<div class="item"><b>+10</b> Weapon</div>
+										<div class="item"><b>+10</b> Armor</div>
+										<div class="item"><b>+10</b> Shield</div>
+										<div class="item"><b>+10</b> Manteau</div>
+										<div class="item"><b>+10</b> Shoes</div>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+<script>
+$(document).ready(function() {
+});
+</script>

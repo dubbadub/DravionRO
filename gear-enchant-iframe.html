@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <meta charset="ISO-8859-1">
+
+    <title>Gear Enchant</title>
+	<link rel="icon" type="image/x-icon" href="logo.png">
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/fomantic-ui@2.9.4/dist/semantic.min.css">
+
+	<script src="https://cdn.jsdelivr.net/npm/fomantic-ui@2.9.4/dist/semantic.min.js"></script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+
+	<script src="https://cdn.jsdelivr.net/npm/chart.js@3.0.0/dist/chart.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
+</html>
+<style>
+	@font-face {
+		font-family: headerFont;
+		src: url(ArtineBold-nA4d4.ttf);
+	}
+	.ui.huge.header {
+		font-family: headerFont;
+	}
+</style>
+<body>
+    <div class="ui padded stackable grid">
+		<div class="row">
+			<div class="column">
+				<h2 class="ui huge header"><em data-emoji=":ring:" class="small"></em>Gear Enchant</h2>
+
+				<div class="ui floating info message">
+					<p>This page contains information about <b>Donate Accessory and Donate Armor Set</b> drop with enchant.</p>
+				</div>
+
+				<!-- ACCESSORIES ENCHANT -->
+				<h4 class="ui top attached header"><em data-emoji=":ring:" class="small"></em>ACCESSORIES</h4>
+				<div class="ui attached segment">
+					<div class="ui styled fluid accordion">
+						<div class="title">
+							<center>
+								<h4>GRADE <em data-emoji=":regional_indicator_d:" class="small"></em></h4>
+							</center>
+						</div>
+						<div class="content">
+							<table class="ui six column celled stacking center aligned table">
+								<thead>
+									<tr>
+										<th>DROP RATE</th>
+										<th>OTIONS</th>
+										<th>ENCHANTS</th>
+										<th>ITEM</th>
+										<th>DROP BY</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td rowspan="6">
+											<div class="ui green progress" data-percent="60">
+												<div class="bar">
+													<div class="progress"></div>
+												</div>
+											</div>
+										</td>
+										<td rowspan="6"><em data-emoji=":one:" class="small"></em></td>
+										<td rowspan="6">
+											<div class="ui list">
+												<div class="item"><b>Flee:</b> +1 ~ 10</div>
+												<div class="item"><b>Perfect Dodge:</b> +1 ~ 10</div>
+												<div class="item"><b>Critical Rate:</b> +1 ~ 10</div>
+												<div class="item"><b>Critical Damage Resistance :</b> +1% ~ 20%</div>
+											</div>
+										</td>
+										<td>Necklace of Power (STR)</td>
+										<td >
+											<div class="ui list">
+												<div class="item">Vesper</div>
+												<div class="item">Stormy Knight</div>
+												<div class="item">Doppelganger</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>Ring of Sharp (DEX)</td>
+										<td>
+											<div class="ui list">
+												<div class="item">Incantation Samurai</div>
+												<div class="item">Amon Ra</div>
+												<div class="item">Garm</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>Ring of Defense (VIT)</td>
+										<td>
+											<div class="ui list">
+												<div class="item">Kiel</div>
+												<div class="item">Ygnizem</div>
+												<div class="item">Osiris</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>Ring of Magic (INT)</td>
+										<td>
+											<div class="ui list">
+												<div class="item">Turtle General</div>
+												<div class="item">Detale</div>
+												<div class="item">Evil Snake Lord</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>Power of Critical (LUK)</td>
+										<td>
+											<div class="ui list">
+												<div class="item">Atroce</div>
+												<div class="item">Baphomet</div>
+												<div class="item">Maya</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>Necklace of Dodge (AGI)</td>
+										<td>
+											<div class="ui list">
+												<div class="item">Bacsojin</div>
+												<div class="item">Golden Thief Bug</div>
+												<div class="item">Phreeoni</div>
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					
+						<div class="title">
+							<center>
+								<h4>GRADE <em data-emoji=":regional_indicator_c:" class="small"></em></h4>
+							</center>
+						</div>
+						<div class="content">
+							<table class="ui six column celled stacking center aligned table">
+								<thead>
+									<tr>
+										<th>DROP RATE</th>
+										<th>OTIONS</th>
+										<th>ENCHANTS</th>
+										<th>ITEM</th>
+										<th>DROP BY</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td rowspan="6">
+											<div class="ui yellow progress" data-percent="50">
+												<div class="bar">
+													<div class="progress"></div>
+												</div>
+											</div>
+										</td>
+										<td rowspan="6"><em data-emoji=":two:" class="small"></em></td>
+										<td rowspan="6">
+											<div class="ui list">
+												<div class="item"><b>Flee:</b> +1 ~ 10</div>
+												<div class="item"><b>Perfect Dodge:</b> +1 ~ 10</div>
+												<div class="item"><b>Critical Rate:</b> +1 ~ 10</div>
+												<div class="item"><b>Critical Damage Resistance :</b> +1% ~ 20%</div>
+												<div class="item"><b>Random Stats:</b> +1 ~ 10</div>
+											</div>
+										</td>
+										<td>Necklace of Power (STR)</td>
+										<td >
+											<div class="ui list">
+												<div class="item">Vesper</div>
+												<div class="item">Stormy Knight</div>
+												<div class="item">Doppelganger</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>Ring of Sharp (DEX)</td>
+										<td>
+											<div class="ui list">
+												<div class="item">Incantation Samurai</div>
+												<div class="item">Amon Ra</div>
+												<div class="item">Garm</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>Ring of Defense (VIT)</td>
+										<td>
+											<div class="ui list">
+												<div class="item">Kiel</div>
+												<div class="item">Ygnizem</div>
+												<div class="item">Osiris</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>Ring of Magic (INT)</td>
+										<td>
+											<div class="ui list">
+												<div class="item">Turtle General</div>
+												<div class="item">Detale</div>
+												<div class="item">Evil Snake Lord</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>Power of Critical (LUK)</td>
+										<td>
+											<div class="ui list">
+												<div class="item">Atroce</div>
+												<div class="item">Baphomet</div>
+												<div class="item">Maya</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>Necklace of Dodge (AGI)</td>
+										<td>
+											<div class="ui list">
+												<div class="item">Bacsojin</div>
+												<div class="item">Golden Thief Bug</div>
+												<div class="item">Phreeoni</div>
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+
+						<div class="title">
+							<center>
+								<h4>GRADE <em data-emoji=":regional_indicator_b:" class="small"></em></h4>
+							</center>
+						</div>
+						<div class="content">
+							<table class="ui six column celled stacking center aligned table">
+								<thead>
+									<tr>
+										<th>DROP RATE</th>
+										<th>OTIONS</th>
+										<th>ENCHANTS</th>
+										<th>ITEM</th>
+										<th>DROP BY</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td rowspan="6">
+											<div class="ui red progress" data-percent="10">
+												<div class="bar">
+													<div class="progress"></div>
+												</div>
+											</div>
+										</td>
+										<td rowspan="6"><em data-emoji=":three:" class="small"></em></td>
+										<td rowspan="6">
+											<div class="ui list">
+												<div class="item"><b>Flee:</b> +1 ~ 10</div>
+												<div class="item"><b>Perfect Dodge:</b> +1 ~ 10</div>
+												<div class="item"><b>Critical Rate:</b> +1 ~ 10</div>
+												<div class="item"><b>Critical Damage Resistance :</b> +1% ~ 20%</div>
+												<div class="item"><b>Random Stats:</b> +1 ~ 10</div>
+											</div>
+										</td>
+										<td>Necklace of Power (STR)</td>
+										<td >
+											<div class="ui list">
+												<div class="item">Vesper</div>
+												<div class="item">Stormy Knight</div>
+												<div class="item">Doppelganger</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>Ring of Sharp (DEX)</td>
+										<td>
+											<div class="ui list">
+												<div class="item">Incantation Samurai</div>
+												<div class="item">Amon Ra</div>
+												<div class="item">Garm</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>Ring of Defense (VIT)</td>
+										<td>
+											<div class="ui list">
+												<div class="item">Kiel</div>
+												<div class="item">Ygnizem</div>
+												<div class="item">Osiris</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>Ring of Magic (INT)</td>
+										<td>
+											<div class="ui list">
+												<div class="item">Turtle General</div>
+												<div class="item">Detale</div>
+												<div class="item">Evil Snake Lord</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>Power of Critical (LUK)</td>
+										<td>
+											<div class="ui list">
+												<div class="item">Atroce</div>
+												<div class="item">Baphomet</div>
+												<div class="item">Maya</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>Necklace of Dodge (AGI)</td>
+										<td>
+											<div class="ui list">
+												<div class="item">Bacsojin</div>
+												<div class="item">Golden Thief Bug</div>
+												<div class="item">Phreeoni</div>
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div><br>
+				<!-- END OF ACCESSORIES ENCHANT -->
+
+				<!-- ARMOR SET ENCHANT -->
+				<h4 class="ui top attached header"><em data-emoji=":shield:" class="small"></em>ARMOR SET</h4>
+				<div class="ui attached segment">
+					<div class="ui styled fluid accordion">
+						<div class="title">
+							<center>
+								<h4>GRADE <em data-emoji=":regional_indicator_d:" class="small"></em></h4>
+							</center>
+						</div>
+						<div class="content">
+							<table class="ui six column celled stacking center aligned table">
+								<thead>
+									<tr>
+										<th>DROP RATE</th>
+										<th>OTIONS</th>
+										<th>ENCHANTS</th>
+										<th>ITEM</th>
+										<th>DROP BY</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td rowspan="4">
+											<div class="ui green progress" data-percent="60">
+												<div class="bar">
+													<div class="progress"></div>
+												</div>
+											</div>
+										</td>
+										<td rowspan="4"><em data-emoji=":one:" class="small"></em></td>
+										<td>
+											<div class="ui list">
+												<div class="item"><b>Random Stats:</b> +1 ~ 10</div>
+											</div>
+										</td>
+										<td>All Donate Armors</td>
+										<td >
+											<div class="ui list">
+												<div class="item">Dracula</div>
+												<div class="item">Eddga</div>
+												<div class="item">Orc Lord</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="ui list">
+												<div class="item"><b>Elemental Resist:</b> +1% ~ 10%</div>
+											</div>
+										</td>
+										<td>Shield of All</td>
+										<td>
+											<div class="ui list">
+												<div class="item">Ktullanux</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="ui list">
+												<div class="item"><b>Critial:</b> +1 ~ 10</div>
+												<div class="item"><b>HIT:</b> +1 ~ 10</div>
+											</div>
+										</td>
+										<td>All Donate Mantuea</td>
+										<td>
+											<div class="ui list">
+												<div class="item">Mistress</div>
+												<div class="item">Tao Gunka</div>
+												<div class="item">Orc Hero</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="ui list">
+												<div class="item"><b>HP Rate:</b> +1% ~ 10%</div>
+												<div class="item"><b>Heal Power & Heal Received:</b> +1% ~ 15%</div>
+												<div class="item"><b>After Cast Delay Reduction:</b> +1% ~ 15%</div>
+												<div class="item"><b>Variable Cast Time Reduction:</b> +1% ~ 15%</div>
+											</div>
+										</td>
+										<td>All Donate Shoes</td>
+										<td>
+											<div class="ui list">
+												<div class="item">Moonlight Flower</div>
+												<div class="item">Dark Lord</div>
+												<div class="item">Drake</div>
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					
+						<div class="title">
+							<center>
+								<h4>GRADE <em data-emoji=":regional_indicator_c:" class="small"></em></h4>
+							</center>
+						</div>
+						<div class="content">
+							<table class="ui six column celled stacking center aligned table">
+								<thead>
+									<tr>
+										<th>DROP RATE</th>
+										<th>OTIONS</th>
+										<th>ENCHANTS</th>
+										<th>ITEM</th>
+										<th>DROP BY</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td rowspan="4">
+											<div class="ui yellow progress" data-percent="50">
+												<div class="bar">
+													<div class="progress"></div>
+												</div>
+											</div>
+										</td>
+										<td rowspan="4"><em data-emoji=":two:" class="small"></em></td>
+										<td>
+											<div class="ui list">
+												<div class="item"><b>Random Stats:</b> +1 ~ 10</div>
+												<div class="item"><b>HP/SP:</b> +1 ~ 15000</div>
+												<div class="item"><b>HP/SP Rate:</b> +1% ~ 10%</div>
+												<div class="item"><b>ATK/MATK:</b> +1 ~ 30</div>
+												<div class="item"><b>ATK %, MATK %, Long Range Damage:</b> +1% ~ 3%</div>
+											</div>
+										</td>
+										<td>All Donate Armors</td>
+										<td >
+											<div class="ui list">
+												<div class="item">Dracula</div>
+												<div class="item">Eddga</div>
+												<div class="item">Orc Lord</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="ui list">
+												<div class="item"><b>Elemental Resist:</b> +1% ~ 10%</div>
+												<div class="item"><b>Damage Against Element Monsters:</b> +1% ~ 15%</div>
+											</div>
+										</td>
+										<td>Shield of All</td>
+										<td>
+											<div class="ui list">
+												<div class="item">Ktullanux</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="ui list">
+												<div class="item"><b>Random Stats:</b> +1 ~ 10</div>
+												<div class="item"><b>HP/SP:</b> +1 ~ 15000</div>
+												<div class="item"><b>HP/SP Rate:</b> +1% ~ 10%</div>
+												<div class="item"><b>ATK/MATK:</b> +1 ~ 30</div>
+											</div>
+										</td>
+										<td>All Donate Mantuea</td>
+										<td>
+											<div class="ui list">
+												<div class="item">Mistress</div>
+												<div class="item">Tao Gunka</div>
+												<div class="item">Orc Hero</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="ui list">
+												<div class="item"><b>HP/SP:</b> +1 ~ 15000</div>
+												<div class="item"><b>HP/SP Rate:</b> +1% ~ 10%</div>
+												<div class="item"><b>ATK/MATK:</b> +1 ~ 30</div>
+												<div class="item"><b>ATK %, MATK %, Long Range Damage:</b> +1% ~ 3%</div>
+											</div>
+										</td>
+										<td>All Donate Shoes</td>
+										<td>
+											<div class="ui list">
+												<div class="item">Moonlight Flower</div>
+												<div class="item">Dark Lord</div>
+												<div class="item">Drake</div>
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+
+						<div class="title">
+							<center>
+								<h4>GRADE <em data-emoji=":regional_indicator_b:" class="small"></em></h4>
+							</center>
+						</div>
+						<div class="content">
+							<table class="ui six column celled stacking center aligned table">
+								<thead>
+									<tr>
+										<th>DROP RATE</th>
+										<th>OTIONS</th>
+										<th>ENCHANTS</th>
+										<th>ITEM</th>
+										<th>DROP BY</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td rowspan="4">
+											<div class="ui red progress" data-percent="10">
+												<div class="bar">
+													<div class="progress"></div>
+												</div>
+											</div>
+										</td>
+										<td rowspan="4"><em data-emoji=":three:" class="small"></em></td>
+										<td>
+											<div class="ui list">
+												<div class="item"><b>Random Stats:</b> +1 ~ 10</div>
+												<div class="item"><b>HP/SP:</b> +1 ~ 15000</div>
+												<div class="item"><b>HP/SP Rate:</b> +1% ~ 10%</div>
+												<div class="item"><b>ATK/MATK:</b> +1 ~ 30</div>
+												<div class="item"><b>ATK %, MATK %, Long Range Damage:</b> +1% ~ 3%</div>
+											</div>
+										</td>
+										<td>All Donate Armors</td>
+										<td >
+											<div class="ui list">
+												<div class="item">Dracula</div>
+												<div class="item">Eddga</div>
+												<div class="item">Orc Lord</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="ui list">
+												<div class="item"><b>Elemental Resist:</b> +1% ~ 10%</div>
+												<div class="item"><b>Damage Against Element Monsters:</b> +1% ~ 15%</div>
+											</div>
+										</td>
+										<td>Shield of All</td>
+										<td>
+											<div class="ui list">
+												<div class="item">Ktullanux</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="ui list">
+												<div class="item"><b>Random Stats:</b> +1 ~ 10</div>
+												<div class="item"><b>HP/SP:</b> +1 ~ 15000</div>
+												<div class="item"><b>HP/SP Rate:</b> +1% ~ 10%</div>
+												<div class="item"><b>ATK/MATK:</b> +1 ~ 30</div>
+											</div>
+										</td>
+										<td>All Donate Mantuea</td>
+										<td>
+											<div class="ui list">
+												<div class="item">Mistress</div>
+												<div class="item">Tao Gunka</div>
+												<div class="item">Orc Hero</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="ui list">
+												<div class="item"><b>HP/SP:</b> +1 ~ 15000</div>
+												<div class="item"><b>HP/SP Rate:</b> +1% ~ 10%</div>
+												<div class="item"><b>ATK/MATK:</b> +1 ~ 30</div>
+												<div class="item"><b>ATK %, MATK %, Long Range Damage:</b> +1% ~ 3%</div>
+											</div>
+										</td>
+										<td>All Donate Shoes</td>
+										<td>
+											<div class="ui list">
+												<div class="item">Moonlight Flower</div>
+												<div class="item">Dark Lord</div>
+												<div class="item">Drake</div>
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+				<!-- END OF ARMOR SET ENCHANT -->
+
+				<div class="ui floating yellow message">
+					<h4 class="ui header"><em data-emoji=":recycle:" class="small"></em>ARMOR SET RECYCLER</h4>
+					<p>You can recycle unwanted Armor Sets with enchants at <span class="armor_set_recycler_location"></span>. Recycling equipment will reward you with <b>Armorset Recycler Dust</b>.</p>
+					<p><b>Recycle Dust</b> can be exchange for <b>valuable rewards and future items</b>!</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+<script>
+	function locationInfo() {
+		var armor_set_recycler_location = '<a href="" onclick="return false;">@warp main 256 251</a>';
+        var armor_set_recycler = document.getElementsByClassName('armor_set_recycler_location');
+        for(var i = 0; i < armor_set_recycler.length; i++) {
+            armor_set_recycler[i].innerHTML = armor_set_recycler_location;
+        }
+	}
+</script>
+<script>
+$(document).ready(function() {
+	$('.ui.progress').progress();
+	$('.ui.accordion').accordion();
+
+	locationInfo();
+
+	$("span a").click(function() {
+        navigator.clipboard.writeText(this.innerHTML);
+    });
+});
+</script>

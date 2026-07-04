@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <meta charset="ISO-8859-1">
+
+    <title>Commands</title>
+	<link rel="icon" type="image/x-icon" href="logo.png">
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/fomantic-ui@2.9.4/dist/semantic.min.css">
+
+	<script src="https://cdn.jsdelivr.net/npm/fomantic-ui@2.9.4/dist/semantic.min.js"></script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+
+	<script src="https://cdn.jsdelivr.net/npm/chart.js@3.0.0/dist/chart.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
+</html>
+<style>
+	@font-face {
+		font-family: headerFont;
+		src: url(ArtineBold-nA4d4.ttf);
+	}
+	.ui.huge.header {
+		font-family: headerFont;
+	}
+</style>
+<body>
+    <div class="ui padded stackable grid">
+		<div class="row">
+			<div class="column">
+				<h2 class="ui huge header"><em data-emoji=":keyboard:" class="small"></em>Commands</h2>
+
+				<div class="ui floating info message">
+					<p>This page contains information about <b>common used @commands</b>.</p>
+					<p>By clicking on the cell/blue word, it will automotically copied the command then, you can paste it in-game.</p>
+				</div>
+
+				<table class="ui basic celled stacking table">
+					<thead>
+						<tr>
+							<th>COMMANDS</th>
+							<th>DESCRIPTION</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="selectable"><a>@refresh</a></td>
+							<td>Refresh your screen</td>
+						</tr>
+						<tr>
+							<td class="selectable"><a>@autovend</a></td>
+							<td>Auto vend for <b>Merchant & Super Novice Class</b></td>
+						</tr>
+						<tr>
+							<td class="selectable"><a>@iteminfo</a></td>
+							<td>Search for item information using <b>item id or item name</b>
+								<br>
+								Example: @iteminfo poring_card or @iteminfo 4001
+								<br><br>
+								Shortcut for this command is <a href="" onclick="return false;">@ii</a>
+							</td>
+						</tr>
+						<tr>
+							<td class="selectable"><a>@noask</a></td>
+							<td>Auto reject deal, any invite, and whisper from other player</td>
+						</tr>
+						<tr>
+							<td class="selectable"><a>@storage</a></td>
+							<td>Access storage without going to kafra</td>
+						</tr>
+						<tr>
+							<td class="selectable"><a>@breakguild</a></td>
+							<td>Disband your guild <b>(must be the gm of the guild)</b></td>
+						</tr>
+						<tr>
+							<td class="selectable"><a>@mapmove</a></td>
+							<td>Teleport your character based on the coordinate you entered
+								<br>
+								Example: @mapmove prontera 150 150
+								<br><br>
+								Shortcut for this command is <a href="" onclick="return false;">@warp</a> or <a href="" onclick="return false;">@rura</a>
+							</td>
+						</tr>
+						<tr>
+							<td class="selectable"><a>@go</a></td>
+							<td>Teleport your chacter on designated map using <b>map id or map name (type the command to see the list)</b>
+								<br>
+								Example: @go 0 or @go prontera
+							</td>
+						</tr>
+						<tr>
+							<td class="selectable"><a>@servertime</a></td>
+							<td>Show server date and time</td>
+						</tr>
+						<tr>
+							<td class="selectable"><a>@who</a></td>
+							<td>Show all the players name on current map</td>
+						</tr>
+						<tr>
+							<td class="selectable"><a>@autoloottype</a></td>
+							<td>Autoloot items based on type:
+								<br>
+								<b>0 = healing items, 2 = usable, 3 = etc., 4 = armor, 5 = weapon, 6 = card, 7 = petegg, 8 = pet armor, 10 = ammunation</b>
+								<br>
+								Example: @autoloottype 0
+								<br><br>
+								Shortcut for this command is <a href="" onclick="return false;">@warp</a> or <a href="" onclick="return false;">@rura</a>
+							</td>
+						</tr>
+						<tr>
+							<td class="selectable"><a>@autolootitem</a></td>
+							<td>Autoloot items based on item id or item name. Maximum of 10 items
+								<br>
+								Example: @autolootitem +4001 or @autolootitem +poring_card
+								<br><br>
+								To removed specific item on the list type <a href="" onclick="return false;">@autolootitem -</a>
+								<br>
+								Example: @autolootitem -4001 or @autolootitem -poring_card
+								<br><br>
+								Shortcut for this command is <a href="" onclick="return false;">@alootid</a>
+								<br><br>
+								To reset your list type <a href="" onclick="return false;">@alootid reset</a>
+							</td>
+						</tr>
+						<tr>
+							<td class="selectable"><a>@autoloot</a></td>
+							<td>Autoloot all items based on %
+								<br>
+								Example: @autoloot 10 (automatically loot all items with 10% drop rate and below)
+						</tr>
+						<tr>
+							<td class="selectable"><a>@whereis</a></td>
+							<td>Find the map location of the searched monster using <b>monster id or monster name</b>
+								<br>
+								Example: @whereis poring
+							</td>
+						</tr>
+						<tr>
+							<td class="selectable"><a>@whodrops</a></td>
+							<td>List down the monsters from highest to lowest % of drop rate of the search item using <b>item id or item name</b>
+								<br>
+								Example: @whodrops 4001 or @whodrops poring_card
+							</td>
+						</tr>
+						<tr>
+							<td class="selectable"><a>@hominfo</a></td>
+							<td>Show homunculus information</td>
+						</tr>
+						<tr>
+							<td class="selectable"><a>@homstats</a></td>
+							<td>Show homunculus status</td>
+						</tr>
+						<tr>
+							<td class="selectable"><a>@request</a></td>
+							<td>Send private message to <b>Game Master</b> in game</td>
+						</tr>
+						<tr>
+							<td class="selectable"><a>@mobinfo</a></td>
+							<td>Show monster information using <b>monster id or monster name</b>
+								<br>
+								Example: @mobinfo poring or @mobinfo 1002
+								<br><br>
+								Shortcut for this command is <a href="" onclick="return false;">@mi</a>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</body>
+<script>
+$(document).ready(function() {
+	$("a").click(function(){
+        navigator.clipboard.writeText(this.innerHTML);
+    });
+});
+</script>

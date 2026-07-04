@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <meta charset="ISO-8859-1">
+
+    <title>Lottery Draw</title>
+	<link rel="icon" type="image/x-icon" href="logo.png">
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/fomantic-ui@2.9.4/dist/semantic.min.css">
+
+	<script src="https://cdn.jsdelivr.net/npm/fomantic-ui@2.9.4/dist/semantic.min.js"></script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+
+	<script src="https://cdn.jsdelivr.net/npm/chart.js@3.0.0/dist/chart.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
+</html>
+<style>
+	@font-face {
+		font-family: headerFont;
+		src: url(ArtineBold-nA4d4.ttf);
+	}
+	.ui.huge.header {
+		font-family: headerFont;
+	}
+</style>
+<body>
+    <div class="ui padded stackable grid">
+		<div class="row">
+			<div class="column">
+				<h2 class="ui huge header"><em data-emoji=":game_die:" class="small"></em>Lottery Draw</h2>
+
+				<div class="ui floating info message">
+					<p>This page contains information about <b>Lottery Draw</b>.</p>
+				</div>
+
+				<h4 class="ui top attached header"><em data-emoji=":question:" class="small"></em>HOW IT WORKS?</h4>
+				<div class="ui attached segment">
+					<div class="ui circular ordered stackable steps">
+						<div class="step">
+							<div class="content">
+								<div class="title"><em data-emoji=":tickets:" class="small"></em>Purchase</div>
+								<div class="description">Lottery Ticket</div>
+							</div>
+						</div>
+						<div class="step">
+							<div class="content">
+								<div class="title"><em data-emoji=":1234:" class="small"></em>Choose</div>
+								<div class="description">3 Numbers between 1 ~ 25</div>
+							</div>
+						</div>
+						<div class="step">
+							<div class="content">
+								<div class="title"><em data-emoji=":alarm_clock:" class="small"></em>Draw</div>
+								<div class="description">20:00 Server Time</div>
+							</div>
+						</div>
+						<div class="step">
+							<div class="content">
+								<div class="title"><em data-emoji=":gift:" class="small"></em>Reward</div>
+								<div class="description">Rodex/in-game mail</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<table class="ui two column celled stacking table">
+					<thead>
+						<tr>
+							<th>STEPS</th>
+							<th>REQUIREMENTS</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Purchase a <b>Lottery Ticket</b> using <b>Credits</b></td>
+							<td>#lottery -> #credits</td>
+						</tr>
+						<tr>
+							<td>Choose your <b>"own numbers"</b> or <b>"using lucky pick"</b></td>
+							<td><b>3 numbers</b> from <b>1 ~ 25</b></td>
+						</tr>
+						<tr>
+							<td>The lottery will draw <b>automatically</b></td>
+							<td>Everyday around <b>20:00 Server Time</b></td>
+						</tr>
+						<tr>
+							<td>Winner will received the reward thru <b>Rodex</b></td>
+							<td><b>Must</b> match all <b>3 numbers</b></td>
+						</tr>
+					</tbody>
+				</table>
+
+				<div class="ui floating yellow message">
+					<h4 class="ui header"><em data-emoji=":gift:" class="small"></em>JACKPOT WINNER</h4>
+					<p>Multiple winners split the jackpot equally.</p>
+				</div>
+
+				<div class="ui floating yellow message">
+					<h4 class="ui header"><em data-emoji=":gift:" class="small"></em>CONSOLATION PRIZE</h4>
+					<p>Match <b>2 numbers</b> and receive a consolation reward worth: <b>10%</b> of the current jackpot</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+<script>
+$(document).ready(function() {
+	$('.ui.yellow.message').transition({
+		animation : 'bounce',
+		duration  : 2000,
+		interval  : 1000
+	}).transition('set looping');
+});
+</script>
