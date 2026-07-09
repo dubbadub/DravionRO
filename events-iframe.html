@@ -32,127 +32,213 @@
 				<h2 class="ui huge header"><em data-emoji=":partying_face:" class="small"></em>Events</h2>
 
 				<div class="ui floating info message">
-					<p>This page contains information about <b>automated events</b>.</p>
+					<p>This page contains information about <b>automated events</b>. All displayed time is based on <b>Server Time (ST)</b></p>
 				</div>
 
-				<table class="ui two column striped celled stacking center aligned table">
+				<table class="ui three column center aligned celled unstackable table">
 					<thead>
 						<tr>
-							<th colspan="2">SCHEDULE</th>
+							<th colspan="3">DIFFICULTY</th>
 						</tr>
 					</thead>
 					<tbody>
-						<!-- AM -->
 						<tr>
-							<td><em data-emoji=":bomb:" class="small"></em>Bombring</td>
-							<td><em data-emoji=":alarm_clock:" class="small"></em>12:00 AM</td>
+							<td>
+								<div class="ui yellow disabled rating" data-icon="star" data-rating="1" data-max-rating="3"></div>
+								<p>Newbie Friendly</p>
+							</td>
+							<td>
+								<div class="ui yellow disabled rating" data-icon="star" data-rating="2" data-max-rating="3"></div>
+								<p>Experienced Player</p>
+							</td>
+							<td>
+								<div class="ui yellow disabled rating" data-icon="star" data-rating="3" data-max-rating="3"></div>
+								<p>Seasoned Player</p>
+							</td>
 						</tr>
-						<tr>
-							<td><em data-emoji=":game_die:" class="small"></em>Dice</td>
-							<td><em data-emoji=":alarm_clock:" class="small"></em>1:00 AM</td>
-						</tr>
-						<tr>
-							<td><em data-emoji=":crown:" class="small"></em>Last Man Standing</td>
-							<td><em data-emoji=":alarm_clock:" class="small"></em>2:00 AM</td>
-						</tr>
-						<tr>
-							<td><em data-emoji=":goal:" class="small"></em>Poring Catcher</td>
-							<td><em data-emoji=":alarm_clock:" class="small"></em>3:00 AM</td>
-						</tr>
-						<tr>
-							<td><em data-emoji=":zombie:" class="small"></em>Novice vs Zombie</td>
-							<td><em data-emoji=":alarm_clock:" class="small"></em>4:00 AM</td>
-						</tr>
-						<tr>
-							<td><em data-emoji=":bomb:" class="small"></em>Bombring</td>
-							<td><em data-emoji=":alarm_clock:" class="small"></em>6:00 AM</td>
-						</tr>
-						<tr>
-							<td><em data-emoji=":game_die:" class="small"></em>Dice</td>
-							<td><em data-emoji=":alarm_clock:" class="small"></em>7:00 AM</td>
-						</tr>
-						<tr>
-							<td><em data-emoji=":crown:" class="small"></em>Last Man Standing</td>
-							<td><em data-emoji=":alarm_clock:" class="small"></em>8:00 AM</td>
-						</tr>
-						<tr>
-							<td><em data-emoji=":goal:" class="small"></em>Poring Catcher</td>
-							<td><em data-emoji=":alarm_clock:" class="small"></em>9:00 AM</td>
-						</tr>
-						<tr>
-							<td><em data-emoji=":zombie:" class="small"></em>Novice vs Zombie</td>
-							<td><em data-emoji=":alarm_clock:" class="small"></em>10:00 AM</td>
-						</tr>
-						<!-- END OF AM -->
-
-						<!-- PM -->
-						<tr>
-							<td><em data-emoji=":bomb:" class="small"></em>Bombring</td>
-							<td><em data-emoji=":alarm_clock:" class="small"></em>12:00 PM</td>
-						</tr>
-						<tr>
-							<td><em data-emoji=":game_die:" class="small"></em>Dice</td>
-							<td><em data-emoji=":alarm_clock:" class="small"></em>1:00 PM</td>
-						</tr>
-						<tr>
-							<td><em data-emoji=":crown:" class="small"></em>Last Man Standing</td>
-							<td><em data-emoji=":alarm_clock:" class="small"></em>2:00 PM</td>
-						</tr>
-						<tr>
-							<td><em data-emoji=":goal:" class="small"></em>Poring Catcher</td>
-							<td><em data-emoji=":alarm_clock:" class="small"></em>3:00 PM</td>
-						</tr>
-						<tr>
-							<td><em data-emoji=":zombie:" class="small"></em>Novice vs Zombie</td>
-							<td><em data-emoji=":alarm_clock:" class="small"></em>4:00 PM</td>
-						</tr>
-						<tr>
-							<td><em data-emoji=":bomb:" class="small"></em>Bombring</td>
-							<td><em data-emoji=":alarm_clock:" class="small"></em>6:00 PM</td>
-						</tr>
-						<tr>
-							<td><em data-emoji=":game_die:" class="small"></em>Dice</td>
-							<td><em data-emoji=":alarm_clock:" class="small"></em>7:00 PM</td>
-						</tr>
-						<tr>
-							<td><em data-emoji=":crown:" class="small"></em>Last Man Standing</td>
-							<td><em data-emoji=":alarm_clock:" class="small"></em>8:00 PM</td>
-						</tr>
-						<tr>
-							<td><em data-emoji=":goal:" class="small"></em>Poring Catcher</td>
-							<td><em data-emoji=":alarm_clock:" class="small"></em>9:00 PM</td>
-						</tr>
-						<tr>
-							<td><em data-emoji=":zombie:" class="small"></em>Novice vs Zombie</td>
-							<td><em data-emoji=":alarm_clock:" class="small"></em>10:00 PM</td>
-						</tr>
-						<!-- END OF PM -->
 					</tbody>
 				</table>
 
-				<h4 class="ui top attached header"><em data-emoji=":bomb:" class="small"></em>BOMBRING</h4>
-				<div class="ui attached segment">
-					<p>Evade the summoned <b>Bomb Poring</b> until the end.</p>
-				</div><br>
-				
-				<h4 class="ui top attached header"><em data-emoji=":game_die:" class="small"></em>DICE</h4>
-				<div class="ui attached segment">
-					<p>Choose a number from <b>1 - 4</b>, and stay on the box until the winner(s) name declared.</p>
-				</div><br>
+				<div class="ui three centered cards">
+					<div class="card">
+						<div class="content">
+							<div class="right floated meta"><em data-emoji=":bomb:" class="small"></em></div>
 
-				<h4 class="ui top attached header"><em data-emoji=":crown:" class="small"></em>LAST MAN STANDING</h4>
-				<div class="ui attached segment">
-					<p>It's a <b>pvp event</b> where you must be the <b>last player</b> alive to win the event.</p>
-				</div><br>
+							<div class="header">Bombring</div>
+							<div class="meta">
+								Difficulty: <div class="ui yellow disabled rating" data-icon="star" data-rating="1" data-max-rating="3"></div>
+							</div>
 
-				<h4 class="ui top attached header"><em data-emoji=":goal:" class="small"></em>PORING CATCHER</h4>
-				<div class="ui attached segment">
-					<p>Find and attack the correct name <b>"Poring"</b> to win the event.</p>
-				</div><br>
+							<div class="description">
+								<p>Evade the summoned <b>Bomb Poring</b> until the end.</p>
+							</div>
+						</div>
+						<div class="extra content">
+							<div class="ui horizontal list">
+								<div class="item">
+									<em data-emoji=":alarm_clock:" class="small"></em><div class="ui blue label">00:00 ST</div>
+								</div>
+								<div class="item">
+									<em data-emoji=":alarm_clock:" class="small"></em><div class="ui green label">06:00 ST</div>
+								</div>
+								<div class="item">
+									<em data-emoji=":alarm_clock:" class="small"></em><div class="ui yellow label">12:00 ST</div>
+								</div>
+								<div class="item">
+									<em data-emoji=":alarm_clock:" class="small"></em><div class="ui purple label">18:00 ST</div>
+								</div>
+							</div>
+						</div>
+					</div>
 
-				<h4 class="ui top attached header"><em data-emoji=":zombie:" class="small"></em>NOVICE VS ZOMBIE</h4>
-				<div class="ui attached segment">
-					<p>Evade the summoned <b>Zombie</b> until the end.</p>
+					<div class="card">
+						<div class="content">
+							<div class="right floated meta"><em data-emoji=":game_die:" class="small"></em></div>
+							
+							<div class="header">Dice</div>
+							<div class="meta">
+								Difficulty: <div class="ui yellow disabled rating" data-icon="star" data-rating="1" data-max-rating="3"></div>
+							</div>
+
+							<div class="description">
+								<p>Choose a number from <b>1 ~ 4</b>, then stay on the box until the winner(s) declared.</p>
+							</div>
+						</div>
+						<div class="extra content">
+							<div class="ui horizontal list">
+								<div class="item">
+									<em data-emoji=":alarm_clock:" class="small"></em><div class="ui blue label">01:00 ST</div>
+								</div>
+								<div class="item">
+									<em data-emoji=":alarm_clock:" class="small"></em><div class="ui green label">07:00 ST</div>
+								</div>
+								<div class="item">
+									<em data-emoji=":alarm_clock:" class="small"></em><div class="ui yellow label">13:00 ST</div>
+								</div>
+								<div class="item">
+									<em data-emoji=":alarm_clock:" class="small"></em><div class="ui purple label">19:00 ST</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="card">
+						<div class="content">
+							<div class="right floated meta"><em data-emoji=":crown:" class="small"></em></div>
+							
+							<div class="header">Last Man Standing</div>
+							<div class="meta">
+								Difficulty: <div class="ui yellow disabled rating" data-icon="star" data-rating="3" data-max-rating="3"></div>
+							</div>
+
+							<div class="description">
+								<p>It's a <b>pvp event</b> where you must be the <b>last player</b> alive to win the event.</p>
+							</div>
+						</div>
+						<div class="extra content">
+							<div class="ui horizontal list">
+								<div class="item">
+									<em data-emoji=":alarm_clock:" class="small"></em><div class="ui blue label">02:00 ST</div>
+								</div>
+								<div class="item">
+									<em data-emoji=":alarm_clock:" class="small"></em><div class="ui green label">08:00 ST</div>
+								</div>
+								<div class="item">
+									<em data-emoji=":alarm_clock:" class="small"></em><div class="ui yellow label">14:00 ST</div>
+								</div>
+								<div class="item">
+									<em data-emoji=":alarm_clock:" class="small"></em><div class="ui purple label">20:00 ST</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="card">
+						<div class="content">
+							<div class="right floated meta"><em data-emoji=":goal:" class="small"></em></div>
+							
+							<div class="header">Poring Catcher</div>
+							<div class="meta">
+								Difficulty: <div class="ui yellow disabled rating" data-icon="star" data-rating="1" data-max-rating="3"></div>
+							</div>
+							
+							<div class="description">
+								<p>Find and attack the correct name <b>"Poring"</b> to win the event.</p>
+							</div>
+						</div>
+						<div class="extra content">
+							<div class="ui horizontal list">
+								<div class="item">
+									<em data-emoji=":alarm_clock:" class="small"></em><div class="ui blue label">03:00 ST</div>
+								</div>
+								<div class="item">
+									<em data-emoji=":alarm_clock:" class="small"></em><div class="ui green label">09:00 ST</div>
+								</div>
+								<div class="item">
+									<em data-emoji=":alarm_clock:" class="small"></em><div class="ui yellow label">15:00 ST</div>
+								</div>
+								<div class="item">
+									<em data-emoji=":alarm_clock:" class="small"></em><div class="ui purple label">21:00 ST</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="card">
+						<div class="content">
+							<div class="right floated meta"><em data-emoji=":zombie:" class="small"></em></div>
+							
+							<div class="header">Novice vs Zombie</div>
+							<div class="meta">
+								Difficulty: <div class="ui yellow disabled rating" data-icon="star" data-rating="1" data-max-rating="3"></div>
+							</div>
+							
+							<div class="description">
+								<p>Evade the summoned <b>Zombie</b> until the end.</p>
+							</div>
+						</div>
+						<div class="extra content">
+							<div class="ui horizontal list">
+								<div class="item">
+									<em data-emoji=":alarm_clock:" class="small"></em><div class="ui blue label">04:00 ST</div>
+								</div>
+								<div class="item">
+									<em data-emoji=":alarm_clock:" class="small"></em><div class="ui green label">10:00 ST</div>
+								</div>
+								<div class="item">
+									<em data-emoji=":alarm_clock:" class="small"></em><div class="ui yellow label">16:00 ST</div>
+								</div>
+								<div class="item">
+									<em data-emoji=":alarm_clock:" class="small"></em><div class="ui purple label">22:00 ST</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="card">
+						<div class="content">
+							<div class="right floated meta"><em data-emoji=":skull_crossbones:" class="small"></em></div>
+							
+							<div class="header">World Boss</div>
+							<div class="meta">
+								Difficulty: <div class="ui yellow disabled rating" data-icon="star" data-rating="2" data-max-rating="3"></div>
+							</div>
+							
+							<div class="description">
+								<p>Survive and defeat the <b>World Boss</b>.</p>
+							</div>
+						</div>
+						<div class="extra content">
+							<div class="ui horizontal list">
+								<div class="item">
+									<em data-emoji=":alarm_clock:" class="small"></em><div class="ui black label">11:00 ST</div>
+								</div>
+								<div class="item">
+									<em data-emoji=":alarm_clock:" class="small"></em><div class="ui black label">23:00 ST</div>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -160,6 +246,6 @@
 </body>
 <script>
 $(document).ready(function() {
-	
+	$('.ui.rating').rating();
 });
 </script>

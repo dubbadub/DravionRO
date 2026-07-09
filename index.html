@@ -40,7 +40,7 @@
 	#top-menu {
 		border-radius: 0px;
 	}
-	#navigation-segment, #body-segment {
+	#navigation-segment, .body-segment {
 		min-height: 77.5vh;
 		border: none !important;
 		box-shadow: none !important;
@@ -51,7 +51,7 @@
 	#navigation-modal .list {
 		margin: 5px;
 	}
-	#body-container #iframe-container {
+	.body-container #iframe-container-computer, .body-container #iframe-container-mobile {
 		min-height: 77.5vh;
 		width: 100%;
 		height: 100%;
@@ -225,20 +225,25 @@
 				}
 
 				function linkAccess(data) {
-					document.getElementById('iframe-container').src = data;
+					document.getElementById('iframe-container-computer').src = data;
+					document.getElementById('iframe-container-mobile').src = data;
 					$('.ui.modal').modal('hide');
 				}
 			</script>
 
-			<div id="body-segment" class="ui bottom attached segment">
+			<div class="body-segment ui bottom attached segment">
 				<div class="ui stackable fluid grid">
-					<div class="three wide column"></div>
+					<div class="computer only three wide column"></div>
 
-					<div id="body-container" class="ten wide column">
-						<iframe id="iframe-container" src="" frameborder="0"></iframe>
+					<div class="body-container computer only ten wide column">
+						<iframe id="iframe-container-computer" src="" frameborder="0"></iframe>
 					</div>
 
-					<div class="three wide column"></div>
+					<div class="body-container mobile tablet only sixteen wide column">
+						<iframe id="iframe-container-mobile" src="" frameborder="0"></iframe>
+					</div>
+
+					<div class="computer only three wide column"></div>
 				</div>
 			</div>
 		</div>
