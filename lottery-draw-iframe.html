@@ -29,7 +29,7 @@
     <div class="ui padded stackable grid">
 		<div class="row">
 			<div class="column">
-				<h2 class="ui huge header"><em data-emoji=":game_die:" class="small"></em>Lottery Draw</h2>
+				<h2 class="ui huge header"><em data-emoji=":tickets:" class="small"></em>Lottery Draw</h2>
 
 				<div class="ui floating info message">
 					<p>This page contains information about <b>Lottery Draw</b>.</p>
@@ -71,14 +71,18 @@
 					</div>
 				</div>
 
-				<table class="ui two column celled unstackable scrolling table">
+				<table class="ui two column celled structured unstackable table">
 					<thead>
 						<tr>
 							<th>STEPS</th>
-							<th>REQUIREMENTS</th>
+							<th>INFORMATION</th>
 						</tr>
 					</thead>
 					<tbody>
+						<tr>
+							<td>Talk to the <b>NPC</b></td>
+							<td class="selectable"><a>@npc15</a></td>
+						</tr>
 						<tr>
 							<td>Purchase a <b>Lottery Ticket</b> using <b>Credits</b></td>
 							<td><b>1</b> Lottery Ticket : <b>10</b> Credits</td>
@@ -89,7 +93,7 @@
 						</tr>
 						<tr>
 							<td>The lottery will draw <b>automatically</b></td>
-							<td>Everyday around <b>20:00 Server Time</b></td>
+							<td><b>Everyday</b> around <b>20:00 ST</b></td>
 						</tr>
 						<tr>
 							<td>Winner will received the reward thru <b>Rodex</b></td>
@@ -98,12 +102,12 @@
 					</tbody>
 				</table>
 
-				<div class="ui floating yellow message">
+				<div class="ui floating positive message">
 					<h4 class="ui header"><em data-emoji=":gift:" class="small"></em>JACKPOT WINNER</h4>
 					<p>Multiple winners split the jackpot equally.</p>
 				</div>
 
-				<div class="ui floating yellow message">
+				<div class="ui floating positive message">
 					<h4 class="ui header"><em data-emoji=":gift:" class="small"></em>CONSOLATION PRIZE</h4>
 					<p>Match <b>2 numbers</b> and receive a consolation reward worth: <b>10%</b> of the current jackpot</p>
 				</div>
@@ -113,10 +117,14 @@
 </body>
 <script>
 $(document).ready(function() {
-	$('.ui.yellow.message').transition({
-		animation : 'bounce',
-		duration  : 2000,
-		interval  : 1000
-	}).transition('set looping');
+	$("a").click(function(){
+        navigator.clipboard.writeText(this.innerHTML);
+    });
+
+	// $('.ui.yellow.message').transition({
+	// 	animation : 'bounce',
+	// 	duration  : 2000,
+	// 	interval  : 1000
+	// }).transition('set looping');
 });
 </script>
