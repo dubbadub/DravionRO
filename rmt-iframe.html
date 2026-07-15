@@ -19,36 +19,62 @@
 <style>
 	@font-face {
 		font-family: headerFont;
-		src: url(ArtineBold-nA4d4.ttf);
+		src: url(fonts/PoppinsMedium-1JPv.otf);
 	}
-	.ui.huge.header {
+	@font-face {
+		font-family: textFont;
+		src: url(fonts/PoppinsRegular-B2Bw.otf);
+	}
+	h2 span, h4 span {
 		font-family: headerFont;
+	}
+	p, div.ui.list {
+		font-family: textFont;
+	}
+	/* This is for PC only */
+	@media only screen and (min-width: 992px) {
+		p, div.ui.list {
+			font-size: 1rem;
+		}
+	}
+	/* This is for Mobile and Tablet only */
+	@media only screen and (max-width: 991px) {
+		p, h4 span, div.ui.list {
+			font-size: 1.5rem;
+		}
+		h2 span {
+			font-size: 2.5rem;
+		}
+	}
+	body {
+		background-color: transparent;
 	}
 </style>
 <body>
     <div class="ui padded stackable grid">
 		<div class="row">
 			<div class="column">
-				<h2 class="ui huge header"><em data-emoji=":moneybag:" class="small"></em>Real Money Trading</h2>
+				<h2 class="ui header"><span class="ui text"><em data-emoji=":moneybag:" class="small"></em>Real Money Trading</span></h2>
+			</div>
+		</div>
 
+		<div class="row">
+			<div class="column">
 				<div class="ui floating info message">
 					<p>This page contains information about <b>Real Money Trading (RMT)</b>.</p>
 				</div>
-			</div>
-		</div>
-		<div class="row">
-			<div class="column">
+				
 				<div class="ui raised padded segment">
 					<p>Dear Adventurers,</p>
 					<p>At <b>Dravion RO</b>, <b>Real Money Trading (RMT)</b> is <b>Allowed</b>.</p>
 					<p>We understand that many players spend countless hours hunting rare equipment, farming valuable items, and investing their time into the game. By allowing RMT, we want to give dedicated hunters and hardworking players the opportunity to turn their efforts into real value by selling the items they have legitimately obtained.</p>
 					<p>However, all RMT transactions are conducted entirely at your own risk. Please make sure you know and trust the person you are dealing with before sending any payment or in-game items.</p>
 
-					<p>We strongly encourage everyone to use the <b>Official Admin Middleman Service</b> whenever possible to ensure a fair and secure trading experience.</p>
+					<p>We strongly encourage everyone to use the <b><em data-emoji=":handshake:" class="small"></em>Official Admin Middleman Service</b> whenever possible to ensure a fair and secure trading experience.</p>
 					<p>Thank you for supporting <b>DravionRO</b> and helping us build a safe, fair, and thriving community.</p>
 				</div>
 				<div class="ui positive floating message">
-					<h2 class="ui header"><em data-emoji=":handshake_tone2_tone4:" class="small"></em>Official Middleman Service</h2>
+					<h4 class="ui header"><span class="ui text"><em data-emoji=":handshake:" class="small"></em>Official Middleman Service</span></h4>
 
 					<p>To help make trades safer, you may request an <b>Admin Middleman</b> for your transaction.</p>
 					<p><b>Middleman Fee:</b> <b>5%</b> of the total transaction value.</p>
@@ -64,17 +90,17 @@
 				</div>
 
 				<div class="ui warning floating message">
-					<h2 class="ui header"><em data-emoji=":warning:" class="small"></em>Trade Responsibly</h2>
+					<h4 class="ui header"><span class="ui text"><em data-emoji=":pushpin:" class="small"></em>Trade Responsibly</span></h4>
 
 					<p>If you decide to trade without using an official middleman, you accept all risks involved.</p>
 
 					<p><b>DravionRO Administration is NOT liable for:</b></p>
 					<div class="ui list">
-						<div class="item"><em data-emoji=":person_facepalming:" class="small"></em>Scams or fraudulent transactions</div>
-						<div class="item"><em data-emoji=":person_facepalming:" class="small"></em>Lost money or in-game items</div>
-						<div class="item"><em data-emoji=":person_facepalming:" class="small"></em>Chargebacks or payment disputes</div>
-						<div class="item"><em data-emoji=":person_facepalming:" class="small"></em>Account theft or account-sharing incidents</div>
-						<div class="item"><em data-emoji=":person_facepalming:" class="small"></em>Any disagreements between buyers and sellers</div>
+						<div class="item"><em data-emoji=":x:" class="small"></em>Scams or fraudulent transactions</div>
+						<div class="item"><em data-emoji=":x:" class="small"></em>Lost money or in-game items</div>
+						<div class="item"><em data-emoji=":x:" class="small"></em>Chargebacks or payment disputes</div>
+						<div class="item"><em data-emoji=":x:" class="small"></em>Account theft or account-sharing incidents</div>
+						<div class="item"><em data-emoji=":x:" class="small"></em>Any disagreements between buyers and sellers</div>
 					</div>
 
 					<p><em data-emoji=":person_gesturing_no:" class="small"></em><b>No refunds, reimbursements, restorations, or item recoveries will be provided for losses resulting from player-to-player RMT transactions.</b></p>

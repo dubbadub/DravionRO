@@ -19,47 +19,82 @@
 <style>
 	@font-face {
 		font-family: headerFont;
-		src: url(ArtineBold-nA4d4.ttf);
+		src: url(fonts/PoppinsMedium-1JPv.otf);
 	}
-	.ui.huge.header {
+	@font-face {
+		font-family: textFont;
+		src: url(fonts/PoppinsRegular-B2Bw.otf);
+	}
+	h2 span, h4 span, th, div.title span {
 		font-family: headerFont;
+	}
+	p, td, div.description span, div.value, div.label span, .ui.label {
+		font-family: textFont;
+	}
+	/* This is for PC only */
+	@media only screen and (min-width: 992px) {
+		p, th, td, div.title span, div.description span {
+			font-size: 1rem;
+		}
+	}
+	/* This is for Mobile and Tablet only */
+	@media only screen and (max-width: 991px) {
+		p, th, td, div.title span, div.description span, h4 span {
+			font-size: 1.5rem;
+		}
+		h2 span {
+			font-size: 2.5rem;
+		}
+	}
+	body {
+		background-color: transparent;
+	}
+	thead {
+		background-color: #f8ffff;
+	}
+	tbody {
+		background-color: white;
 	}
 </style>
 <body>
     <div class="ui padded stackable grid">
 		<div class="row">
 			<div class="column">
-				<h2 class="ui huge header"><em data-emoji=":ring:" class="small"></em>Gear Enchant</h2>
+				<h2 class="ui header"><span class="ui text"><em data-emoji=":ring:" class="small"></em>Gear Enchant</span></h2>
+			</div>
+		</div>
 
+		<div class="row">
+			<div class="column">
 				<div class="ui floating info message">
 					<p>This page contains information about <b>Donate Accessory and Donate Armor Set</b> drop with enchant.</p>
 				</div>
 
-				<h4 class="ui top attached header"><em data-emoji=":question:" class="small"></em>HOW IT WORKS?</h4>
-				<div class="ui attached segment">
-					<div class="ui circular ordered stackable steps">
+				<h4 class="ui top attached header"><span class="ui text"><em data-emoji=":question:" class="small"></em>HOW IT WORKS?</span></h4>
+				<div class="ui attached raised segment">
+					<div class="ui stackable fluid circular four ordered steps">
 						<div class="step">
 							<div class="content">
-								<div class="title"><em data-emoji=":gear:" class="small"></em>Gear Up</div>
-								<div class="description">Equipped your best Gear</div>
+								<div class="title"><span class="ui text">Gear Up</span></div>
+								<div class="description"><span class="ui text">Equipped your best Gear</span></div>
 							</div>
 						</div>
 						<div class="step">
 							<div class="content">
-								<div class="title"><em data-emoji=":speech_balloon:" class="small"></em>Command</div>
-								<div class="description">@autoloot 60</div>
+								<div class="title"><span class="ui text">Command</span></div>
+								<div class="description"><span class="ui text">@autoloot 60</span></div>
 							</div>
 						</div>
 						<div class="step">
 							<div class="content">
-								<div class="title"><em data-emoji=":bow_and_arrow:" class="small"></em>Hunt</div>
-								<div class="description">MVP</div>
+								<div class="title"><span class="ui text">Hunt</span></div>
+								<div class="description"><span class="ui text">MVP</span></div>
 							</div>
 						</div>
 						<div class="step">
 							<div class="content">
-								<div class="title"><em data-emoji=":package:" class="small"></em>Drop</div>
-								<div class="description">60% 50% 10%</div>
+								<div class="title"><span class="ui text">Drop</span></div>
+								<div class="description"><span class="ui text">60% 50% 10%</span></div>
 							</div>
 						</div>
 					</div>
@@ -67,10 +102,10 @@
 
 				<!-- ACCESSORIES ENCHANT -->
 				<div class="ui styled fluid accordion">
-					<div class="title">
-						<h4><em data-emoji=":ring:" class="small"></em>ACCESSORIES</h4>
+					<div class="active title">
+						<h4 class="ui header"><span class="ui text"><em data-emoji=":ring:" class="small"></em>ACCESSORIES</span></h4>
 					</div>
-					<div class="content">
+					<div class="active content">
 						<!-- MONSTER DROP -->
 						<table class="ui four column striped celled structured center aligned unstackable table">
 							<thead>
@@ -124,7 +159,7 @@
 							<!-- GRADE D -->
 							<div class="title">
 								<center>
-									<h4>GRADE <em data-emoji=":regional_indicator_d:" class="small"></em></h4>
+									<h4 class="ui header"><span class="ui text">GRADE <em data-emoji=":regional_indicator_d:" class="small"></em></span></h4>
 								</center>
 							</div>
 							<div class="content">
@@ -141,7 +176,7 @@
 											<td>
 												<div class="ui green statistic">
 													<div class="value">60%</div>
-													<div class="label">Good Enchant</div>
+													<div class="label"><span class="ui text">Good Enchant</span></div>
 												</div>
 											</td>
 											<td><em data-emoji=":one:" class="small"></em></td>
@@ -162,7 +197,7 @@
 							<!-- GRADE C -->
 							<div class="title">
 								<center>
-									<h4>GRADE <em data-emoji=":regional_indicator_c:" class="small"></em></h4>
+									<h4 class="ui header"><span class="ui text">GRADE <em data-emoji=":regional_indicator_c:" class="small"></em></span></h4>
 								</center>
 							</div>
 							<div class="content">
@@ -178,7 +213,7 @@
 										<tr>
 											<td>
 												<div class="ui yellow statistic">
-													<div class="value">50%</div>
+													<div class="value"><span class="ui text">50%</span></div>
 													<div class="label">Average Enchant</div>
 												</div>
 											</td>
@@ -201,7 +236,7 @@
 							<!-- GRADE B -->
 							<div class="title">
 								<center>
-									<h4>GRADE <em data-emoji=":regional_indicator_b:" class="small"></em></h4>
+									<h4 class="ui header"><span class="ui text">GRADE <em data-emoji=":regional_indicator_b:" class="small"></em></span></h4>
 								</center>
 							</div>
 							<div class="content">
@@ -218,7 +253,7 @@
 											<td>
 												<div class="ui red statistic">
 													<div class="value">10%</div>
-													<div class="label">Very Good Enchant</div>
+													<div class="label"><span class="ui text">Very Good Enchant</span></div>
 												</div>
 											</td>
 											<td><em data-emoji=":three:" class="small"></em></td>
@@ -242,7 +277,7 @@
 
 					<!-- ARMOR SET ENCHANT -->
 					<div class="title">
-						<h4><em data-emoji=":shield:" class="small"></em>ARMOR SET</h4>
+						<h4 class="ui header"><span class="ui text"><em data-emoji=":shield:" class="small"></em>ARMOR SET</span></h4>
 					</div>
 					<div class="content">
 						<!-- MONSTER DROP BY -->
@@ -284,7 +319,7 @@
 							<!-- GRADE D -->
 							<div class="title">
 								<center>
-									<h4>GRADE <em data-emoji=":regional_indicator_d:" class="small"></em></h4>
+									<h4 class="ui header"><span class="ui text">GRADE <em data-emoji=":regional_indicator_d:" class="small"></em></span></h4>
 								</center>
 							</div>
 							<div class="content">
@@ -302,7 +337,7 @@
 											<td rowspan="4">
 												<div class="ui green statistic">
 													<div class="value">60%</div>
-													<div class="label">Good Enchant</div>
+													<div class="label"><span class="ui text">Good Enchant</span></div>
 												</div>
 											</td>
 											<td rowspan="4"><em data-emoji=":one:" class="small"></em></td>
@@ -349,7 +384,7 @@
 							<!-- GRADE C -->
 							<div class="title">
 								<center>
-									<h4>GRADE <em data-emoji=":regional_indicator_c:" class="small"></em></h4>
+									<h4 class="ui header"><span class="ui text">GRADE <em data-emoji=":regional_indicator_c:" class="small"></em></span></h4>
 								</center>
 							</div>
 							<div class="content">
@@ -367,7 +402,7 @@
 											<td rowspan="4">
 												<div class="ui yellow statistic">
 													<div class="value">50%</div>
-													<div class="label">Average Enchant</div>
+													<div class="label"><span class="ui text">Average Enchant</span></div>
 												</div>
 											</td>
 											<td rowspan="4"><em data-emoji=":two:" class="small"></em></td>
@@ -421,7 +456,7 @@
 							<!-- GRADE B -->
 							<div class="title">
 								<center>
-									<h4>GRADE <em data-emoji=":regional_indicator_b:" class="small"></em></h4>
+									<h4 class="ui header"><span class="ui text">GRADE <em data-emoji=":regional_indicator_b:" class="small"></em></span></h4>
 								</center>
 							</div>
 							<div class="content">
@@ -439,7 +474,7 @@
 											<td rowspan="4">
 												<div class="ui red statistic">
 													<div class="value">10%</div>
-													<div class="label">Very Good Enchant</div>
+													<div class="label"><span class="ui text">Very Good Enchant</span></div>
 												</div>
 											</td>
 											<td rowspan="4"><em data-emoji=":three:" class="small"></em></td>
@@ -495,7 +530,7 @@
 				<!-- END OF ARMOR SET ENCHANT -->
 
 				<div class="ui floating info message">
-					<h4 class="ui header"><em data-emoji=":recycle:" class="small"></em>ARMOR SET RECYCLER</h4>
+					<h4 class="ui header"><span class="ui text"><em data-emoji=":recycle:" class="small"></em>ARMOR SET RECYCLER</span></h4>
 					<p>You can recycle unwanted Armor Sets with enchants at <span class="armor_set_recycler_location"></span>. Recycling equipment will reward you with <b>Armorset Recycler Dust</b>.</p>
 					<p><b>Recycle Dust</b> can be exchange for <b>valuable rewards and future items</b>!</p>
 				</div>
@@ -516,11 +551,30 @@
 $(document).ready(function() {
 	$('.ui.progress').progress();
 	$('.ui.accordion').accordion();
+	// $('.ui.accordion').accordion({
+	// 	onOpening: function() {
+	// 		document.querySelector("iframe").style.height = document.querySelector("iframe").contentWindow.document.body.scrollHeight + 'px';
+	// 	}
+	// });
 
 	locationInfo();
 
 	$("span a").click(function() {
         navigator.clipboard.writeText(this.innerHTML);
     });
+
+	const viewportWidth  = window.innerWidth;
+
+	if(viewportWidth >= 992) {
+		const uiLabel = document.querySelectorAll(".ui.label");
+		uiLabel.forEach(element => {
+			element.classList.remove('massive');
+		});
+	}else {
+		const uiLabel = document.querySelectorAll(".ui.label");
+		uiLabel.forEach(element => {
+			element.classList.add('big');
+		});
+	}
 });
 </script>

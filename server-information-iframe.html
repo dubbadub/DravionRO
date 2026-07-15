@@ -19,23 +19,58 @@
 <style>
 	@font-face {
 		font-family: headerFont;
-		src: url(ArtineBold-nA4d4.ttf);
+		src: url(fonts/PoppinsMedium-1JPv.otf);
 	}
-	.ui.huge.header {
+	@font-face {
+		font-family: textFont;
+		src: url(fonts/PoppinsRegular-B2Bw.otf);
+	}
+	h2 span, th, h4 span {
 		font-family: headerFont;
+	}
+	p, td {
+		font-family: textFont;
+	}
+	/* This is for PC only */
+	@media only screen and (min-width: 992px) {
+		p, td {
+			font-size: 1rem;
+		}
+	}
+	/* This is for Mobile and Tablet only */
+	@media only screen and (max-width: 991px) {
+		p, th, td, h4 span {
+			font-size: 1.5rem;
+		}
+		h2 span {
+			font-size: 2.5rem;
+		}
+	}
+	body {
+		background-color: transparent;
+	}
+	thead {
+		background-color: #f8ffff;
+	}
+	tbody {
+		background-color: white;
 	}
 </style>
 <body>
-    <div class="ui padded stackable grid">
+    <div class="ui padded stackable fluid grid">
 		<div class="row">
 			<div class="column">
-				<h2 class="ui huge header"><em data-emoji=":scroll:" class="small"></em>Server Information</h2>
-
+				<h2 class="ui header"><span class="ui text"><em data-emoji=":scroll:" class="small"></em>Server Information</span></h2>
+			</div>
+		</div>
+		
+		<div class="row">
+			<div class="column">
 				<div class="ui floating info message">
 					<p>This page contains the <b>server information</b>.</p>
 				</div>
 
-				<table class="ui basic celled unstackable table">
+				<table class="ui basic celled unstackable center aligned table">
 					<thead>
 						<tr>
 							<th>DATE</th>
@@ -77,13 +112,13 @@
 					</tbody>
 				</table>
 
-				<div class="ui floating positive message">
-					<h4 class="ui header"><em data-emoji=":gift:" class="small"></em>FULLY EQUIPPED FREEBIES</h4>
+				<div class="ui floating message">
+					<h4 class="ui header"><span class="ui text"><em data-emoji=":gift:" class="small"></em>FULLY EQUIPPED FREEBIES</span></h4>
 					<p>Every player start stronger with our generous starter package!</p>
 				</div>
 
-				<div class="ui floating positive message">
-					<h4 class="ui header"><em data-emoji=":partying_face:" class="small"></em>LAST DONATE ARMOR SET IS GIVEN AS FREEBIES</h4>
+				<div class="ui floating message">
+					<h4 class="ui header"><span class="ui text"><em data-emoji=":partying_face:" class="small"></em>LAST DONATE ARMOR SET IS GIVEN AS FREEBIES</span></h4>
 					<p>Yes, you read it right! Get your journey started with premium equipment and dominate the battlefield from day one!</p>
 				</div>
 			</div>
@@ -92,10 +127,14 @@
 </body>
 <script>
 $(document).ready(function() {
-	// $('.ui.yellow.message').transition({
-	// 	animation : 'bounce',
-	// 	duration  : 2000,
-	// 	interval  : 1000
-	// }).transition('set looping');
+	const viewportWidth  = window.innerWidth;
+	
+	if(viewportWidth >= 992) {
+		document.querySelector("#page-header span").classList.add('medium');
+		document.querySelector("#page-header span").classList.remove('massive');
+	}else {
+		document.querySelector("#page-header span").classList.add('large');
+		document.querySelector("#page-header span").classList.remove('medium');
+	}
 });
 </script>

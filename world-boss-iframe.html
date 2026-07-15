@@ -19,18 +19,62 @@
 <style>
 	@font-face {
 		font-family: headerFont;
-		src: url(ArtineBold-nA4d4.ttf);
+		src: url(fonts/PoppinsMedium-1JPv.otf);
 	}
-	.ui.huge.header {
+	@font-face {
+		font-family: textFont;
+		src: url(fonts/PoppinsRegular-B2Bw.otf);
+	}
+	h2 span, h4 span, th {
 		font-family: headerFont;
+	}
+	p, td {
+		font-family: textFont;
+	}
+	/* This is for PC only */
+	@media only screen and (min-width: 992px) {
+		p, th, td {
+			font-size: 1rem;
+		}
+	}
+	/* This is for Mobile and Tablet only */
+	@media only screen and (max-width: 991px) {
+		p, th, td, h4 span {
+			font-size: 1.5rem;
+		}
+		h2 span {
+			font-size: 2.5rem;
+		}
+	}
+	body {
+		background-color: transparent;
+	}
+	thead {
+		background-color: #f8ffff;
+	}
+	tbody {
+		background-color: white;
+	}
+	#wave-table {
+		overflow-x: auto;
+		width: 100%;
+	}
+
+		#wave-table table {
+		width: 100%;
+		border-collapse: collapse;
 	}
 </style>
 <body>
     <div class="ui padded stackable grid">
 		<div class="row">
 			<div class="column">
-				<h2 class="ui huge header"><em data-emoji=":skull_crossbones:" class="small"></em>World Boss</h2>
+				<h2 class="ui header"><span class="ui text"><em data-emoji=":skull_crossbones:" class="small"></em>World Boss</span></h2>
+			</div>
+		</div>
 
+		<div class="row">
+			<div class="column">
 				<div class="ui floating info message">
 					<p>This page contains information about <b>World Boss</b>.</p>
 				</div>
@@ -59,96 +103,98 @@
 					</tbody>
 				</table>
 
-				<table class="ui eight column celled structured center aligned unstackable compact table">
-					<thead>
-						<tr>
-							<th>WAVE</th>
-							<th colspan="5">MONSTER</th>
-							<th>MVP DROPS</th>
-							<th>LAST HIT BONUS</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td rowspan="2"><em data-emoji=":one:" class="small"></em></td>
-							<td colspan="5"><img class="ui tiny centered image" src="https://file5s.ratemyserver.net/mobs/1272.gif"><br>Dark Lord</td>
-							<td rowspan="2">
-								<div class="ui list">
-									<div class="item">Yggdrasil Box [100]</div>
-									<div class="item">Yggdrasil Seed [100]</div>
-								</div>
-							</td>
-							<td rowspan="2">2 Starlight Coin</td>
-						</tr>
-						<tr>
-							<td><img class="ui mini centered image" src="https://file5s.ratemyserver.net/mobs/1302.gif"><br>Dark Illusion</td>
-							<td><img class="ui mini centered image" src="https://file5s.ratemyserver.net/mobs/1482.gif"><br>Zherlthsh</td>
-							<td><img class="ui mini centered image" src="https://file5s.ratemyserver.net/mobs/1202.gif"><br>Phendark</td>
-							<td><img class="ui mini centered image" src="https://file5s.ratemyserver.net/mobs/1191.gif"><br>Mimic</td>
-							<td><img class="ui mini centered image" src="https://file5s.ratemyserver.net/mobs/1193.gif"><br>Alarm</td>
-						</tr>
+				<div id="wave-table">
+					<table class="ui eight column celled structured center aligned unstackable compact table">
+						<thead>
+							<tr>
+								<th>WAVE</th>
+								<th colspan="5">MONSTER</th>
+								<th>MVP DROPS</th>
+								<th>LAST HIT BONUS</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td rowspan="2"><em data-emoji=":one:" class="small"></em></td>
+								<td colspan="5"><img class="ui tiny centered image" src="https://file5s.ratemyserver.net/mobs/1272.gif"><br>Dark Lord</td>
+								<td rowspan="2">
+									<div class="ui list">
+										<div class="item">Yggdrasil Box [100]</div>
+										<div class="item">Yggdrasil Seed [100]</div>
+									</div>
+								</td>
+								<td rowspan="2">2 Starlight Coin</td>
+							</tr>
+							<tr>
+								<td><img class="ui mini centered image" src="https://file5s.ratemyserver.net/mobs/1302.gif"><br>Dark Illusion</td>
+								<td><img class="ui mini centered image" src="https://file5s.ratemyserver.net/mobs/1482.gif"><br>Zherlthsh</td>
+								<td><img class="ui mini centered image" src="https://file5s.ratemyserver.net/mobs/1202.gif"><br>Phendark</td>
+								<td><img class="ui mini centered image" src="https://file5s.ratemyserver.net/mobs/1191.gif"><br>Mimic</td>
+								<td><img class="ui mini centered image" src="https://file5s.ratemyserver.net/mobs/1193.gif"><br>Alarm</td>
+							</tr>
 
-						<tr>
-							<td rowspan="2"><em data-emoji=":two:" class="small"></em></td>
-							<td colspan="5"><img class="ui tiny centered image" src="https://file5s.ratemyserver.net/mobs/1373.gif"><br>Lord of Death</td>
-							<td rowspan="2">
-								<div class="ui list">
-									<div class="item">Yggdrasil Box [100]</div>
-									<div class="item">Yggdrasil Seed [100]</div>
-								</div>
-							</td>
-							<td rowspan="2">2 Starlight Coin</td>
-						</tr>
-						<tr>
-							<td><img class="ui mini centered image" src="https://file5s.ratemyserver.net/mobs/1507.gif"><br>Bloody Murderer</td>
-							<td><img class="ui mini centered image" src="https://file5s.ratemyserver.net/mobs/1370.gif"><br>Succubus</td>
-							<td><img class="ui mini centered image" src="https://file5s.ratemyserver.net/mobs/1374.gif"><br>Incubus</td>
-							<td><img class="ui mini centered image" src="https://file5s.ratemyserver.net/mobs/1964.gif"><br>Nightmare</td>
-							<td><img class="ui mini centered image" src="https://file5s.ratemyserver.net/mobs/1371.gif"><br>False Angel</td>
-						</tr>
+							<tr>
+								<td rowspan="2"><em data-emoji=":two:" class="small"></em></td>
+								<td colspan="5"><img class="ui tiny centered image" src="https://file5s.ratemyserver.net/mobs/1373.gif"><br>Lord of Death</td>
+								<td rowspan="2">
+									<div class="ui list">
+										<div class="item">Yggdrasil Box [100]</div>
+										<div class="item">Yggdrasil Seed [100]</div>
+									</div>
+								</td>
+								<td rowspan="2">2 Starlight Coin</td>
+							</tr>
+							<tr>
+								<td><img class="ui mini centered image" src="https://file5s.ratemyserver.net/mobs/1507.gif"><br>Bloody Murderer</td>
+								<td><img class="ui mini centered image" src="https://file5s.ratemyserver.net/mobs/1370.gif"><br>Succubus</td>
+								<td><img class="ui mini centered image" src="https://file5s.ratemyserver.net/mobs/1374.gif"><br>Incubus</td>
+								<td><img class="ui mini centered image" src="https://file5s.ratemyserver.net/mobs/1964.gif"><br>Nightmare</td>
+								<td><img class="ui mini centered image" src="https://file5s.ratemyserver.net/mobs/1371.gif"><br>False Angel</td>
+							</tr>
 
-						<tr>
-							<td rowspan="2"><em data-emoji=":three:" class="small"></em></td>
-							<td colspan="5"><img class="ui tiny centered image" src="https://file5s.ratemyserver.net/mobs/1832.gif"><br>Ifrit</td>
-							<td rowspan="2">
-								<div class="ui list">
-									<div class="item">Poison Bottle Box [100]</div>
-									<div class="item">Thunder Box [100]</div>
-									<div class="item">Gloom Box [100]</div>
-									<div class="item">Resentment Box [100]</div>
-									<div class="item">Drowsinnes Box [100]</div>
-								</div>
-							</td>
-							<td rowspan="2">2 Starlight Coin</td>
-						</tr>
-						<tr>
-							<td><img class="ui mini centered image" src="https://file5s.ratemyserver.net/mobs/1834.gif"><br>Salamander</td>
-							<td><img class="ui mini centered image" src="https://file5s.ratemyserver.net/mobs/1833.gif"><br>Kasa</td>
-							<td><img class="ui mini centered image" src="https://file5s.ratemyserver.net/mobs/1837.gif"><br>Imp</td>
-							<td><img class="ui mini centered image" src="https://file5s.ratemyserver.net/mobs/1383.gif"><br>Explosion</td>
-							<td><img class="ui mini centered image" src="https://file5s.ratemyserver.net/mobs/1366.gif"><br>Lava Golem</td>
-						</tr>
+							<tr>
+								<td rowspan="2"><em data-emoji=":three:" class="small"></em></td>
+								<td colspan="5"><img class="ui tiny centered image" src="https://file5s.ratemyserver.net/mobs/1832.gif"><br>Ifrit</td>
+								<td rowspan="2">
+									<div class="ui list">
+										<div class="item">Poison Bottle Box [100]</div>
+										<div class="item">Thunder Box [100]</div>
+										<div class="item">Gloom Box [100]</div>
+										<div class="item">Resentment Box [100]</div>
+										<div class="item">Drowsinnes Box [100]</div>
+									</div>
+								</td>
+								<td rowspan="2">2 Starlight Coin</td>
+							</tr>
+							<tr>
+								<td><img class="ui mini centered image" src="https://file5s.ratemyserver.net/mobs/1834.gif"><br>Salamander</td>
+								<td><img class="ui mini centered image" src="https://file5s.ratemyserver.net/mobs/1833.gif"><br>Kasa</td>
+								<td><img class="ui mini centered image" src="https://file5s.ratemyserver.net/mobs/1837.gif"><br>Imp</td>
+								<td><img class="ui mini centered image" src="https://file5s.ratemyserver.net/mobs/1383.gif"><br>Explosion</td>
+								<td><img class="ui mini centered image" src="https://file5s.ratemyserver.net/mobs/1366.gif"><br>Lava Golem</td>
+							</tr>
 
-						<tr>
-							<td><em data-emoji=":skull_crossbones:" class="small"></em></td>
-							<td colspan="5">
-								<div class="ui list">
-									<div class="item"><img class="ui small centered image" src="https://file5s.ratemyserver.net/mobs/1832.gif"><br>World Boss</div>
-								</div>
-							</td>
-							<td>
-								<div class="ui list">
-									<div class="item">HD Oridecon</div>
-									<div class="item">HD Elunium</div>
-								</div>
-							</td>
-							<td>5 Starlight Coin</td>
-						</tr>
-					</tbody>
-				</table>
+							<tr>
+								<td><em data-emoji=":skull_crossbones:" class="small"></em></td>
+								<td colspan="5">
+									<div class="ui list">
+										<div class="item"><img class="ui small centered image" src="https://file5s.ratemyserver.net/mobs/1832.gif"><br>World Boss</div>
+									</div>
+								</td>
+								<td>
+									<div class="ui list">
+										<div class="item">HD Oridecon</div>
+										<div class="item">HD Elunium</div>
+									</div>
+								</td>
+								<td>5 Starlight Coin</td>
+							</tr>
+						</tbody>
+					</table>
+				</div><br>
 
-				<h4 class="ui top attached header"><em data-emoji=":skull:" class="small"></em>WAVE KILL RANKINGS</h4>
-				<div class="ui attached segment">
+				<h4 class="ui top attached header"><span class="ui text"><em data-emoji=":skull:" class="small"></em>WAVE KILL RANKINGS</span></h4>
+				<div class="ui attached raised segment">
 					<table class="ui two column striped celled structured center aligned unstackable table">
 						<thead>
 							<tr>
@@ -173,8 +219,8 @@
 					</table>
 				</div><br>
 
-				<h4 class="ui top attached header"><em data-emoji=":boom:" class="small"></em>DAMAGE RANKINGS</h4>
-				<div class="ui attached segment">
+				<h4 class="ui top attached header"><span class="ui text"><em data-emoji=":boom:" class="small"></em>DAMAGE RANKINGS</span></h4>
+				<div class="ui attached raised segment">
 					<table class="ui two column striped celled structured center aligned unstackable table">
 						<thead>
 							<tr>
@@ -199,8 +245,8 @@
 					</table>
 				</div><br>
 
-				<h4 class="ui top attached header"><em data-emoji=":people_hugging:" class="small"></em>GUILD DAMAGE RANKINGS</h4>
-				<div class="ui attached segment">
+				<h4 class="ui top attached header"><span class="ui text"><em data-emoji=":family_mwgb:" class="small"></em>GUILD DAMAGE RANKINGS</span></h4>
+				<div class="ui attached raised segment">
 					<table class="ui two column striped celled structured center aligned unstackable table">
 						<thead>
 							<tr>
@@ -233,5 +279,19 @@ $(document).ready(function() {
 	$("a").click(function(){
         navigator.clipboard.writeText(this.innerHTML);
     });
+
+	const viewportWidth  = window.innerWidth;
+
+	if(viewportWidth >= 992) {
+		const uiLabel = document.querySelectorAll(".ui.label");
+		uiLabel.forEach(element => {
+			element.classList.remove('massive');
+		});
+	}else {
+		const uiLabel = document.querySelectorAll(".ui.label");
+		uiLabel.forEach(element => {
+			element.classList.add('big');
+		});
+	}
 });
 </script>

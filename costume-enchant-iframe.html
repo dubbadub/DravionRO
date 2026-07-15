@@ -19,50 +19,85 @@
 <style>
 	@font-face {
 		font-family: headerFont;
-		src: url(ArtineBold-nA4d4.ttf);
+		src: url(fonts/PoppinsMedium-1JPv.otf);
 	}
-	.ui.huge.header {
+	@font-face {
+		font-family: textFont;
+		src: url(fonts/PoppinsRegular-B2Bw.otf);
+	}
+	h2 span, h4 span, th, div.title span {
 		font-family: headerFont;
+	}
+	p, td, div.description span {
+		font-family: textFont;
+	}
+	/* This is for PC only */
+	@media only screen and (min-width: 992px) {
+		p, th, td, div.title span, div.description span {
+			font-size: 1rem;
+		}
+	}
+	/* This is for Mobile and Tablet only */
+	@media only screen and (max-width: 991px) {
+		p, th, td, div.title span, div.description span, h4 span {
+			font-size: 1.5rem;
+		}
+		h2 span {
+			font-size: 2.5rem;
+		}
+	}
+	body {
+		background-color: transparent;
+	}
+	thead {
+		background-color: #f8ffff;
+	}
+	tbody {
+		background-color: white;
 	}
 </style>
 <body>
     <div class="ui padded stackable grid">
 		<div class="row">
 			<div class="column">
-				<h2 class="ui huge header"><em data-emoji=":clown:" class="small"></em>Costume Enchant</h2>
+				<h2 class="ui header"><span class="ui text"><em data-emoji=":dolls:" class="small"></em>Costume Enchant</span></h2>
+			</div>
+		</div>
 
+		<div class="row">
+			<div class="column">
 				<div class="ui floating info message">
 					<p>This page contains information about <b>Costume Enchant</b>.</p>
 				</div>
 
 				<!-- COSTUME WEAPON ENCHANT -->
-				<h4 class="ui top attached header"><em data-emoji=":crossed_swords:" class="small"></em>COSTUME WEAPON ENCHANT</h4>
-				<div class="ui attached segment">
-					<h4 class="ui top attached header"><em data-emoji=":question:" class="small"></em>HOW IT WORKS?</h4>
+				<h4 class="ui top attached header"><span class="ui text"><em data-emoji=":crossed_swords:" class="small"></em>COSTUME WEAPON ENCHANT</span></h4>
+				<div class="ui attached raised segment">
+					<h4 class="ui top attached header"><span class="ui text"><em data-emoji=":question:" class="small"></em>HOW IT WORKS?</span></h4>
 					<div class="ui attached segment">
-						<div class="ui circular ordered stackable steps">
+						<div class="ui stackable fluid circular four ordered steps">
 							<div class="step">
 								<div class="content">
-									<div class="title"><em data-emoji=":speech_balloon:" class="small"></em>Warp</div>
-									<div class="description">@enchant</div>
+									<div class="title"><span class="ui text">Warp</span></div>
+									<div class="description"><span class="ui text">@enchant</span></div>
 								</div>
 							</div>
 							<div class="step">
 								<div class="content">
-									<div class="title"><em data-emoji=":money_with_wings:" class="small"></em>Pay</div>
-									<div class="description">Paid the required materials</div>
+									<div class="title"><span class="ui text">Pay</span></div>
+									<div class="description"><span class="ui text">Paid the required materials</span></div>
 								</div>
 							</div>
 							<div class="step">
 								<div class="content">
-									<div class="title"><em data-emoji=":ballot_box_with_check:" class="small"></em>Success</div>
-									<div class="description">1 Enchant applied</div>
+									<div class="title"><span class="ui text">Success</span></div>
+									<div class="description"><span class="ui text">1 Enchant applied</span></div>
 								</div>
 							</div>
 							<div class="step">
 								<div class="content">
-									<div class="title"><em data-emoji=":arrows_counterclockwise:" class="small"></em>Re-roll</div>
-									<div class="description">Re-roll for new Enchant</div>
+									<div class="title"><span class="ui text">Re-roll</span></div>
+									<div class="description"><span class="ui text">Re-roll for new Enchant</span></div>
 								</div>
 							</div>
 						</div>
@@ -112,33 +147,33 @@
 				<!-- END OF COSTUME WEAPON ENCHANT -->
 
 				<!-- COSTUME UPPER HEAD GEAR ENCHANT -->
-				<h4 class="ui top attached header"><em data-emoji=":tophat:" class="small"></em>COSTUME UPPER HEAD GEAR ENCHANT</h4>
-				<div class="ui attached segment">
-					<h4 class="ui top attached header"><em data-emoji=":question:" class="small"></em>HOW IT WORKS?</h4>
+				<h4 class="ui top attached header"><span class="ui text"><em data-emoji=":tophat:" class="small"></em>COSTUME UPPER HEAD GEAR ENCHANT</span></h4>
+				<div class="ui attached raised segment">
+					<h4 class="ui top attached header"><span class="ui text"><em data-emoji=":question:" class="small"></em>HOW IT WORKS?</span></h4>
 					<div class="ui attached segment">
-						<div class="ui circular ordered stackable steps">
+						<div class="ui stackable fluid circular four ordered steps">
 							<div class="step">
 								<div class="content">
-									<div class="title"><em data-emoji=":speech_balloon:" class="small"></em>Warp</div>
-									<div class="description">@npc17</div>
+									<div class="title"><span class="ui text">Warp</span></div>
+									<div class="description"><span class="ui text">@npc17</span></div>
 								</div>
 							</div>
 							<div class="step">
 								<div class="content">
-									<div class="title"><em data-emoji=":money_with_wings:" class="small"></em>Pay</div>
-									<div class="description">Paid the required materials</div>
+									<div class="title"><span class="ui text">Pay</span></div>
+									<div class="description"><span class="ui text">Paid the required materials</span></div>
 								</div>
 							</div>
 							<div class="step">
 								<div class="content">
-									<div class="title"><em data-emoji=":ballot_box_with_check:" class="small"></em>Success</div>
-									<div class="description">1 Enchant applied</div>
+									<div class="title"><span class="ui text">Success</span></div>
+									<div class="description"><span class="ui text">1 Enchant applied</span></div>
 								</div>
 							</div>
 							<div class="step">
 								<div class="content">
-									<div class="title"><em data-emoji=":arrows_counterclockwise:" class="small"></em>Re-roll</div>
-									<div class="description">Re-roll for new Enchant</div>
+									<div class="title"><span class="ui text">Re-roll</span></div>
+									<div class="description"><span class="ui text">Re-roll for new Enchant</span></div>
 								</div>
 							</div>
 						</div>
@@ -199,5 +234,19 @@ $(document).ready(function() {
 	$("a").click(function(){
         navigator.clipboard.writeText(this.innerHTML);
     });
+
+	const viewportWidth  = window.innerWidth;
+
+	if(viewportWidth >= 992) {
+		const uiLabel = document.querySelectorAll(".ui.label");
+		uiLabel.forEach(element => {
+			element.classList.remove('massive');
+		});
+	}else {
+		const uiLabel = document.querySelectorAll(".ui.label");
+		uiLabel.forEach(element => {
+			element.classList.add('big');
+		});
+	}
 });
 </script>

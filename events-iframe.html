@@ -19,18 +19,53 @@
 <style>
 	@font-face {
 		font-family: headerFont;
-		src: url(ArtineBold-nA4d4.ttf);
+		src: url(fonts/PoppinsMedium-1JPv.otf);
 	}
-	.ui.huge.header {
+	@font-face {
+		font-family: textFont;
+		src: url(fonts/PoppinsRegular-B2Bw.otf);
+	}
+	h2 span, th, div.header span, div.meta span {
 		font-family: headerFont;
+	}
+	p, td, div.ui.label {
+		font-family: textFont;
+	}
+	/* This is for PC only */
+	@media only screen and (min-width: 992px) {
+		p, th, td, div.ui.label {
+			font-size: 1rem;
+		}
+	}
+	/* This is for Mobile and Tablet only */
+	@media only screen and (max-width: 991px) {
+		p, th, td, div.ui.label {
+			font-size: 1.5rem;
+		}
+		h2 span {
+			font-size: 2.5rem;
+		}
+	}
+	body {
+		background-color: transparent;
+	}
+	thead {
+		background-color: #f8ffff;
+	}
+	tbody {
+		background-color: white;
 	}
 </style>
 <body>
-    <div class="ui padded stackable grid">
+    <div class="ui padded stackable fluid grid">
 		<div class="row">
 			<div class="column">
-				<h2 class="ui huge header"><em data-emoji=":partying_face:" class="small"></em>Events</h2>
+				<h2 class="ui header"><span class="ui text"><em data-emoji=":tada:" class="small"></em>Events</span></h2>
+			</div>
+		</div>
 
+		<div class="row">
+			<div class="column">
 				<div class="ui floating info message">
 					<p>This page contains information about <b>automated events</b>. All displayed time is based on <b>Server Time (ST)</b></p>
 				</div>
@@ -59,14 +94,14 @@
 					</tbody>
 				</table>
 
-				<div class="ui three raised centered cards">
+				<div class="ui raised centered cards">
 					<div class="card">
 						<div class="content">
 							<div class="right floated meta"><em data-emoji=":bomb:" class="small"></em></div>
 
-							<div class="header">Bombring</div>
+							<div class="header"><span class="ui text">Bombring</span></div>
 							<div class="meta">
-								Difficulty: <div class="ui yellow disabled rating" data-icon="star" data-rating="1" data-max-rating="3"></div>
+								<span class="ui text">Difficulty:</span><div class="ui yellow disabled rating" data-icon="star" data-rating="1" data-max-rating="3"></div>
 							</div>
 
 							<div class="description">
@@ -75,7 +110,7 @@
 						</div>
 						<div class="extra content">
 							<center>
-								<div class="ui four column compact center aligned stackable grid">
+								<div class="ui two column compact center aligned stackable fluid grid">
 									<div class="column">
 										<div class="ui basic blue label">00:00 ST</div>
 									</div>
@@ -97,9 +132,9 @@
 						<div class="content">
 							<div class="right floated meta"><em data-emoji=":game_die:" class="small"></em></div>
 							
-							<div class="header">Dice</div>
+							<div class="header"><span class="ui text">Dice</span></div>
 							<div class="meta">
-								Difficulty: <div class="ui yellow disabled rating" data-icon="star" data-rating="1" data-max-rating="3"></div>
+								<span class="ui text">Difficulty:</span><div class="ui yellow disabled rating" data-icon="star" data-rating="1" data-max-rating="3"></div>
 							</div>
 
 							<div class="description">
@@ -108,7 +143,7 @@
 						</div>
 						<div class="extra content">
 							<center>
-								<div class="ui four column compact center aligned stackable grid">
+								<div class="ui two column compact center aligned stackable fluid grid">
 									<div class="column">
 										<div class="ui basic blue label">01:00 ST</div>
 									</div>
@@ -130,9 +165,9 @@
 						<div class="content">
 							<div class="right floated meta"><em data-emoji=":crown:" class="small"></em></div>
 							
-							<div class="header">Last Man Standing</div>
+							<div class="header"><span class="ui text">Last Man Standing</span></div>
 							<div class="meta">
-								Difficulty: <div class="ui yellow disabled rating" data-icon="star" data-rating="3" data-max-rating="3"></div>
+								<span class="ui text">Difficulty:</span><div class="ui yellow disabled rating" data-icon="star" data-rating="3" data-max-rating="3"></div>
 							</div>
 
 							<div class="description">
@@ -141,7 +176,7 @@
 						</div>
 						<div class="extra content">
 							<center>
-								<div class="ui four column compact center aligned stackable grid">
+								<div class="ui two column compact center aligned stackable fluid grid">
 									<div class="column">
 										<div class="ui basic blue label">02:00 ST</div>
 									</div>
@@ -163,9 +198,9 @@
 						<div class="content">
 							<div class="right floated meta"><em data-emoji=":goal:" class="small"></em></div>
 							
-							<div class="header">Poring Catcher</div>
+							<div class="header"><span class="ui text">Poring Catcher</span></div>
 							<div class="meta">
-								Difficulty: <div class="ui yellow disabled rating" data-icon="star" data-rating="1" data-max-rating="3"></div>
+								<span class="ui text">Difficulty:</span><div class="ui yellow disabled rating" data-icon="star" data-rating="1" data-max-rating="3"></div>
 							</div>
 							
 							<div class="description">
@@ -174,7 +209,7 @@
 						</div>
 						<div class="extra content">
 							<center>
-								<div class="ui four column compact center aligned stackable grid">
+								<div class="ui two column compact center aligned stackable fluid grid">
 									<div class="column">
 										<div class="ui basic blue label">03:00 ST</div>
 									</div>
@@ -196,9 +231,9 @@
 						<div class="content">
 							<div class="right floated meta"><em data-emoji=":zombie:" class="small"></em></div>
 							
-							<div class="header">Novice vs Zombie</div>
+							<div class="header"><span class="ui text">Novice vs Zombie</span></div>
 							<div class="meta">
-								Difficulty: <div class="ui yellow disabled rating" data-icon="star" data-rating="1" data-max-rating="3"></div>
+								<span class="ui text">Difficulty:</span><div class="ui yellow disabled rating" data-icon="star" data-rating="1" data-max-rating="3"></div>
 							</div>
 							
 							<div class="description">
@@ -207,7 +242,7 @@
 						</div>
 						<div class="extra content">
 							<center>
-								<div class="ui four column compact center aligned stackable grid">
+								<div class="ui two column compact center aligned stackable fluid grid">
 									<div class="column">
 										<div class="ui basic blue label">04:00 ST</div>
 									</div>
@@ -229,9 +264,9 @@
 						<div class="content">
 							<div class="right floated meta"><em data-emoji=":skull_crossbones:" class="small"></em></div>
 							
-							<div class="header">World Boss</div>
+							<div class="header"><span class="ui text">World Boss</span></div>
 							<div class="meta">
-								Difficulty: <div class="ui yellow disabled rating" data-icon="star" data-rating="2" data-max-rating="3"></div>
+								<span class="ui text">Difficulty:</span><div class="ui yellow disabled rating" data-icon="star" data-rating="2" data-max-rating="3"></div>
 							</div>
 							
 							<div class="description">
@@ -240,7 +275,7 @@
 						</div>
 						<div class="extra content">
 							<center>
-								<div class="ui two column compact center aligned stackable grid">
+								<div class="ui two column compact center aligned stackable fluid grid">
 									<div class="column">
 										<div class="ui basic black label">11:00 ST</div>
 									</div>
@@ -266,5 +301,51 @@ $(document).ready(function() {
 			duration  : 1000
 		}); // Animates in on hover
 	});
+
+	const viewportWidth  = window.innerWidth;
+	
+	if(viewportWidth >= 992) {
+		document.querySelector(".ui.cards").classList.add('three');
+		document.querySelector(".ui.cards").classList.remove('two');
+
+		const cardHeader = document.querySelectorAll("div.header span");
+		cardHeader.forEach(element => {
+			element.classList.add('large');
+			element.classList.remove('big');
+		});
+		
+		const cardMeta = document.querySelectorAll("div.meta span");
+		cardMeta.forEach(element => {
+			element.classList.add('large');
+			element.classList.remove('big');
+		});
+
+		const rating = document.querySelectorAll(".ui.rating");
+		rating.forEach(element => {
+			element.classList.add('large');
+			element.classList.remove('huge');
+		});
+	}else {
+		document.querySelector(".ui.cards").classList.add('two');
+		document.querySelector(".ui.cards").classList.remove('three');
+
+		const cardHeader = document.querySelectorAll("div.header span");
+		cardHeader.forEach(element => {
+			element.classList.add('big');
+			element.classList.remove('large');
+		});
+		
+		const cardMeta = document.querySelectorAll("div.meta span");
+		cardMeta.forEach(element => {
+			element.classList.add('big');
+			element.classList.remove('large');
+		});
+
+		const rating = document.querySelectorAll(".ui.rating");
+		rating.forEach(element => {
+			element.classList.add('huge');
+			element.classList.remove('large');
+		});
+	}
 });
 </script>

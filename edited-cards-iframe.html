@@ -19,31 +19,60 @@
 <style>
 	@font-face {
 		font-family: headerFont;
-		src: url(ArtineBold-nA4d4.ttf);
+		src: url(fonts/PoppinsMedium-1JPv.otf);
 	}
-	.ui.huge.header {
+	@font-face {
+		font-family: textFont;
+		src: url(fonts/PoppinsRegular-B2Bw.otf);
+	}
+	h2 span, div.header span, div.meta span, div.ui.sub.header span {
 		font-family: headerFont;
+	}
+	p, .ui.bulleted.list div.item {
+		font-family: textFont;
+	}
+	/* This is for PC only */
+	@media only screen and (min-width: 992px) {
+		p {
+			font-size: 1rem;
+		}
+	}
+	/* This is for Mobile and Tablet only */
+	@media only screen and (max-width: 991px) {
+		p, .ui.bulleted.list div.item, div.ui.sub.header span {
+			font-size: 1.5rem;
+		}
+		h2 span {
+			font-size: 2.5rem;
+		}
+	}
+	body {
+		background-color: transparent;
 	}
 </style>
 <body>
     <div class="ui padded stackable grid">
 		<div class="row">
 			<div class="column">
-				<h2 class="ui huge header"><em data-emoji=":card_box:" class="small"></em>Edited Cards</h2>
+				<h2 class="ui header"><span class="ui text"><em data-emoji=":card_box:" class="small"></em>Edited Cards</span></h2>
+			</div>
+		</div>
 
+		<div class="row">
+			<div class="column">
 				<div class="ui floating info message">
 					<p>This page contains information about <b>Edited Cards</b>.</p>
 				</div>
 
-				<div class="ui four raised centered cards">
+				<div class="ui raised centered cards">
 					<div class="card">
 						<div class="content">
 							<div class="right floated meta"><img class="ui image" src="https://file5s.ratemyserver.net/items/small/card.gif"></div>
 
-							<div class="header">Angelring Card</div>
-							<div class="meta">Item ID: 4054</div>
+							<div class="header"><span class="ui text">Angelring Card</span></div>
+							<div class="meta"><span class="ui text">Item ID: 4054</span></div>
 						
-							<div class="ui sub header">EFFECTS:</div>
+							<div class="ui sub header"><span class="ui text">EFFECTS:</span></div>
 
 							<div class="ui bulleted list">
 								<div class="item">Change the element of your <b>Armor</b> to <b>Holy</b></div>
@@ -59,10 +88,10 @@
 						<div class="content">
 							<div class="right floated meta"><img class="ui image" src="https://file5s.ratemyserver.net/items/small/card.gif"></div>
 
-							<div class="header">Arc Angelring Card</div>
-							<div class="meta">Item ID: 4241</div>
+							<div class="header"><span class="ui text">Arc Angelring Card</span></div>
+							<div class="meta"><span class="ui text">Item ID: 4241</span></div>
 						
-							<div class="ui sub header">EFFECTS:</div>
+							<div class="ui sub header"><span class="ui text">EFFECTS:</span></div>
 
 							<div class="ui bulleted list">
 								<div class="item">Max HP +300</div>
@@ -78,10 +107,10 @@
 						<div class="content">
 							<div class="right floated meta"><img class="ui image" src="https://file5s.ratemyserver.net/items/small/card.gif"></div>
 
-							<div class="header">Bow Guardian Card</div>
-							<div class="meta">Item ID: 4428</div>
+							<div class="header"><span class="ui text">Bow Guardian Card</span></div>
+							<div class="meta"><span class="ui text">Item ID: 4428</span></div>
 						
-							<div class="ui sub header">EFFECTS:</div>
+							<div class="ui sub header"><span class="ui text">EFFECTS:</span></div>
 
 							<p>When equipped on <b>Bow</b> class weapon:</p>
 							<div class="ui bulleted list">
@@ -100,10 +129,10 @@
 						<div class="content">
 							<div class="right floated meta"><img class="ui image" src="https://file5s.ratemyserver.net/items/small/card.gif"></div>
 
-							<div class="header">Byorgue Card</div>
-							<div class="meta">Item ID: 4426</div>
+							<div class="header"><span class="ui text">Byorgue Card</span></div>
+							<div class="meta"><span class="ui text">Item ID: 4426</span></div>
 						
-							<div class="ui sub header">EFFECTS:</div>
+							<div class="ui sub header"><span class="ui text">EFFECTS:</span></div>
 
 							<p>When equipped br <b>Rogue</b> classes:</p>
 							<div class="ui bulleted list">
@@ -121,10 +150,10 @@
 						<div class="content">
 							<div class="right floated meta"><img class="ui image" src="https://file5s.ratemyserver.net/items/small/card.gif"></div>
 
-							<div class="header">Dark Illusion Card</div>
-							<div class="meta">Item ID: 4169</div>
+							<div class="header"><span class="ui text">Dark Illusion Card</span></div>
+							<div class="meta"><span class="ui text">Item ID: 4169</span></div>
 						
-							<div class="ui sub header">EFFECTS:</div>
+							<div class="ui sub header"><span class="ui text">EFFECTS:</span></div>
 
 							<div class="ui bulleted list">
 								<div class="item">Max HP -10%</div>
@@ -148,10 +177,10 @@
 						<div class="content">
 							<div class="right floated meta"><img class="ui image" src="https://file5s.ratemyserver.net/items/small/card.gif"></div>
 
-							<div class="header">Dolor of Thanatos Card</div>
-							<div class="meta">Item ID: 4398</div>
+							<div class="header"><span class="ui text">Dolor of Thanatos Card</span></div>
+							<div class="meta"><span class="ui text">Item ID: 4398</span></div>
 						
-							<div class="ui sub header">EFFECTS:</div>
+							<div class="ui sub header"><span class="ui text">EFFECTS:</span></div>
 
 							<div class="ui bulleted list">
 								<div class="item">Increase <b>Magical Damage</b> against <b>Demi Human Monster and Player</b> by 5%</div>
@@ -166,10 +195,10 @@
 						<div class="content">
 							<div class="right floated meta"><img class="ui image" src="https://file5s.ratemyserver.net/items/small/card.gif"></div>
 
-							<div class="header">Devilring Card</div>
-							<div class="meta">Item ID: 4174</div>
+							<div class="header"><span class="ui text">Devilring Card</span></div>
+							<div class="meta"><span class="ui text">Item ID: 4174</span></div>
 						
-							<div class="ui sub header">EFFECTS:</div>
+							<div class="ui sub header"><span class="ui text">EFFECTS:</span></div>
 
 							<div class="ui bulleted list">
 								<div class="item">Decrease damage <b>taken</b> from <b>Neutral</b> elemental attacks by 50%</div>
@@ -186,10 +215,10 @@
 						<div class="content">
 							<div class="right floated meta"><img class="ui image" src="https://file5s.ratemyserver.net/items/small/card.gif"></div>
 
-							<div class="header">Dragonfly Card</div>
-							<div class="meta">Item ID: 4179</div>
+							<div class="header"><span class="ui text">Dragonfly Card</span></div>
+							<div class="meta"><span class="ui text">Item ID: 4179</span></div>
 						
-							<div class="ui sub header">EFFECTS:</div>
+							<div class="ui sub header"><span class="ui text">EFFECTS:</span></div>
 
 							<div class="ui bulleted list">
 								<div class="item">Agi +10</div>
@@ -209,10 +238,10 @@
 						<div class="content">
 							<div class="right floated meta"><img class="ui image" src="https://file5s.ratemyserver.net/items/small/card.gif"></div>
 
-							<div class="header">Eclipse Card</div>
-							<div class="meta">Item ID: 4266</div>
+							<div class="header"><span class="ui text">Eclipse Card</span></div>
+							<div class="meta"><span class="ui text">Item ID: 4266</span></div>
 						
-							<div class="ui sub header">EFFECTS:</div>
+							<div class="ui sub header"><span class="ui text">EFFECTS:</span></div>
 
 							<div class="ui bulleted list">
 								<div class="item">Vit +10</div>
@@ -232,10 +261,10 @@
 						<div class="content">
 							<div class="right floated meta"><img class="ui image" src="https://file5s.ratemyserver.net/items/small/card.gif"></div>
 
-							<div class="header">Entweihen Crothen Card</div>
-							<div class="meta">Item ID: 4451</div>
+							<div class="header"><span class="ui text">Entweihen Crothen Card</span></div>
+							<div class="meta"><span class="ui text">Item ID: 4451</span></div>
 						
-							<div class="ui sub header">EFFECTS:</div>
+							<div class="ui sub header"><span class="ui text">EFFECTS:</span></div>
 
 							<div class="ui bulleted list">
 								<div class="item">MATK Rate +30%</div>
@@ -250,10 +279,10 @@
 						<div class="content">
 							<div class="right floated meta"><img class="ui image" src="https://file5s.ratemyserver.net/items/small/card.gif"></div>
 
-							<div class="header">Galion Card</div>
-							<div class="meta">Item ID: 4423</div>
+							<div class="header"><span class="ui text">Galion Card</span></div>
+							<div class="meta"><span class="ui text">Item ID: 4423</span></div>
 						
-							<div class="ui sub header">EFFECTS:</div>
+							<div class="ui sub header"><span class="ui text">EFFECTS:</span></div>
 
 							<div class="ui bulleted list">
 								<div class="item">Hit +25</div>
@@ -269,10 +298,10 @@
 						<div class="content">
 							<div class="right floated meta"><img class="ui image" src="https://file5s.ratemyserver.net/items/small/card.gif"></div>
 
-							<div class="header">Gemini-S58 Card</div>
-							<div class="meta">Item ID: 4354</div>
+							<div class="header"><span class="ui text">Gemini-S58 Card</span></div>
+							<div class="meta"><span class="ui text">Item ID: 4354</span></div>
 						
-							<div class="ui sub header">EFFECTS:</div>
+							<div class="ui sub header"><span class="ui text">EFFECTS:</span></div>
 
 							<div class="ui bulleted list">
 								<div class="item">Allstats +3</div>
@@ -289,10 +318,10 @@
 						<div class="content">
 							<div class="right floated meta"><img class="ui image" src="https://file5s.ratemyserver.net/items/small/card.gif"></div>
 
-							<div class="header">Ghostring Card</div>
-							<div class="meta">Item ID: 4047</div>
+							<div class="header"><span class="ui text">Ghostring Card</span></div>
+							<div class="meta"><span class="ui text">Item ID: 4047</span></div>
 						
-							<div class="ui sub header">EFFECTS:</div>
+							<div class="ui sub header"><span class="ui text">EFFECTS:</span></div>
 
 							<div class="ui bulleted list">
 								<div class="item">Change the element of your <b>Armor</b> to <b>Ghost</b></div>
@@ -309,10 +338,10 @@
 						<div class="content">
 							<div class="right floated meta"><img class="ui image" src="https://file5s.ratemyserver.net/items/small/card.gif"></div>
 
-							<div class="header">Hydrolancer Card</div>
-							<div class="meta">Item ID: 4384</div>
+							<div class="header"><span class="ui text">Hydrolancer Card</span></div>
+							<div class="meta"><span class="ui text">Item ID: 4384</span></div>
 						
-							<div class="ui sub header">EFFECTS:</div>
+							<div class="ui sub header"><span class="ui text">EFFECTS:</span></div>
 
 							<div class="ui bulleted list">
 								<div class="item">Auto cast <b>Level 1 Spell Breaker</b> when dealing <b>Physical Attack</b></div>
@@ -328,10 +357,10 @@
 						<div class="content">
 							<div class="right floated meta"><img class="ui image" src="https://file5s.ratemyserver.net/items/small/card.gif"></div>
 
-							<div class="header">Mastering Card</div>
-							<div class="meta">Item ID: 4197</div>
+							<div class="header"><span class="ui text">Mastering Card</span></div>
+							<div class="meta"><span class="ui text">Item ID: 4197</span></div>
 						
-							<div class="ui sub header">EFFECTS:</div>
+							<div class="ui sub header"><span class="ui text">EFFECTS:</span></div>
 
 							<div class="ui bulleted list">
 								<div class="item">Luk +10</div>
@@ -352,10 +381,10 @@
 						<div class="content">
 							<div class="right floated meta"><img class="ui image" src="https://file5s.ratemyserver.net/items/small/card.gif"></div>
 
-							<div class="header">Maya Purple Card</div>
-							<div class="meta">Item ID: 4198</div>
+							<div class="header"><span class="ui text">Maya Purple Card</span></div>
+							<div class="meta"><span class="ui text">Item ID: 4198</span></div>
 						
-							<div class="ui sub header">EFFECTS:</div>
+							<div class="ui sub header"><span class="ui text">EFFECTS:</span></div>
 
 							<div class="ui bulleted list">
 								<div class="item">ATK +50</div>
@@ -371,10 +400,10 @@
 						<div class="content">
 							<div class="right floated meta"><img class="ui image" src="https://file5s.ratemyserver.net/items/small/card.gif"></div>
 
-							<div class="header">Sword Guardian Card</div>
-							<div class="meta">Item ID: 4427</div>
+							<div class="header"><span class="ui text">Sword Guardian Card</span></div>
+							<div class="meta"><span class="ui text">Item ID: 4427</span></div>
 						
-							<div class="ui sub header">EFFECTS:</div>
+							<div class="ui sub header"><span class="ui text">EFFECTS:</span></div>
 
 							<div class="ui bulleted list">
 								<div class="item">ATK +25</div>
@@ -396,10 +425,10 @@
 						<div class="content">
 							<div class="right floated meta"><img class="ui image" src="https://file5s.ratemyserver.net/items/small/card.gif"></div>
 
-							<div class="header">Toad Card</div>
-							<div class="meta">Item ID: 4306</div>
+							<div class="header"><span class="ui text">Toad Card</span></div>
+							<div class="meta"><span class="ui text">Item ID: 4306</span></div>
 						
-							<div class="ui sub header">EFFECTS:</div>
+							<div class="ui sub header"><span class="ui text">EFFECTS:</span></div>
 
 							<div class="ui bulleted list">
 								<div class="item">ATK +10%</div>
@@ -419,10 +448,10 @@
 						<div class="content">
 							<div class="right floated meta"><img class="ui image" src="https://file5s.ratemyserver.net/items/small/card.gif"></div>
 
-							<div class="header">Wanderling Wolf Card</div>
-							<div class="meta">Item ID: 4183</div>
+							<div class="header"><span class="ui text">Wanderling Wolf Card</span></div>
+							<div class="meta"><span class="ui text">Item ID: 4183</span></div>
 						
-							<div class="ui sub header">EFFECTS:</div>
+							<div class="ui sub header"><span class="ui text">EFFECTS:</span></div>
 
 							<div class="ui bulleted list">
 								<div class="item">Str +10</div>
@@ -444,6 +473,38 @@
 </body>
 <script>
 $(document).ready(function() {
+	const viewportWidth  = window.innerWidth;
 	
+	if(viewportWidth >= 992) {
+		document.querySelector(".ui.cards").classList.add('four');
+		document.querySelector(".ui.cards").classList.remove('two');
+
+		const cardHeader = document.querySelectorAll("div.header span");
+		cardHeader.forEach(element => {
+			element.classList.add('medium');
+			element.classList.remove('large');
+		});
+		
+		const cardMeta = document.querySelectorAll("div.meta span");
+		cardMeta.forEach(element => {
+			element.classList.add('medium');
+			element.classList.remove('large');
+		});
+	}else {
+		document.querySelector(".ui.cards").classList.add('two');
+		document.querySelector(".ui.cards").classList.remove('four');
+
+		const cardHeader = document.querySelectorAll("div.header span");
+		cardHeader.forEach(element => {
+			element.classList.add('large');
+			element.classList.remove('medium');
+		});
+		
+		const cardMeta = document.querySelectorAll("div.meta span");
+		cardMeta.forEach(element => {
+			element.classList.add('large');
+			element.classList.remove('medium');
+		});
+	}
 });
 </script>

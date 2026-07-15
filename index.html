@@ -3,7 +3,7 @@
     <meta charset="ISO-8859-1">
 
     <title>DravionRO Web Guide</title>
-	<link rel="icon" type="image/x-icon" href="logo.png">
+	<link rel="icon" type="image/x-icon" href="images/logo.png">
 
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
 
@@ -19,239 +19,270 @@
 <style>
 	@font-face {
 		font-family: headerFont;
-		src: url(QuickZap-ZVPmZ.ttf);
+		src: url(fonts/PoppinsMedium-1JPv.otf);
 	}
 	@font-face {
-		font-family: subHeaderFont;
-		src: url(ArtineBold-nA4d4.ttf);
+		font-family: textFont;
+		src: url(fonts/PoppinsRegular-B2Bw.otf);
 	}
-	#dravion-ro-header {
+	h3 .content, #navigation-bar span, #navigation-modal h4 span {
 		font-family: headerFont;
-		letter-spacing: 0.10em;
-		/*font-size: 2.5vw;*/
 	}
-	#dravion-ro-sub-header {
-		letter-spacing: 0.50em;
-		/*font-size: 2vw;*/
+	/* This is for PC only */
+	@media only screen and (min-width: 992px) {
+		#logo-image {
+			width: 25%;
+			height: auto;
+		}
+		h3 .content {
+			letter-spacing: 0.3rem;
+		}
+		#navigation-bar span {
+			margin-top: 5px;
+			letter-spacing: 0.2rem;
+		}
+		.body-container #iframe-container-computer, .body-container #iframe-container-mobile {
+			width: 100%;
+		}
+		#navigation-modal h4 span {
+			font-size: 1.5rem;
+		}
 	}
-	span.ui.sub.header {
-		margin-top: 5px;
-	}
-	#top-menu {
-		border-radius: 0px;
-	}
-	#navigation-segment, .body-segment {
-		min-height: 77.5vh;
-		border: none !important;
-		box-shadow: none !important;
+	/* This is for Mobile and Tablet only */
+	@media only screen and (max-width: 991px) {
+		#logo-image {
+			width: 100%;
+			height: auto;
+		}
+		h3 .content  {
+			letter-spacing: 0.5rem;
+			font-size: 3rem;
+		}
+		#navigation-bar span {
+			margin-top: 5px;
+			font-size: 1.5rem;
+		}
+		.body-container #iframe-container-computer, .body-container #iframe-container-mobile {
+			width: 100%;
+		}
+		#navigation-modal h4 span {
+			letter-spacing: 0.1rem;
+			font-size: 2rem;
+		}
 	}
 	#navigation-modal .item {
-		padding: 10px;
+		padding: 10px 0px;
 	}
 	#navigation-modal .list {
-		margin: 5px;
+		margin: -10px;
 	}
-	.body-container #iframe-container-computer, .body-container #iframe-container-mobile {
-		min-height: 77.5vh;
-		width: 100%;
-		height: 100%;
+	body {
+		background-color: #f8f9fa;
 	}
 </style>
 <body>
-    <div class="ui padded stackable grid">
-		<!-- TOP MENU/TITLE -->
-		<div id="top-menu" class="ui top attached stackable fluid menu">
-			<div class="left center aligned menu">
-				<div class="ui center aligned item">
-					<h2 class="ui header">
-					<img src="logo.png">
-						<div class="content">
-							<span id="dravion-ro-header">Dravion Ragnarok Online</span>
-							<div id="dravion-ro-sub-header" class="sub header">Web guide</div>
-						</div>
-					</h2>
-				</div>
-			</div>
-			<div class="right center aligned menu">
-				<div class="ui right aligned category search item">
-					<div class="ui icon big input">
-						<input id="search-bar" type="text" placeholder="Search...">
-						<i class="search link icon"></i>
-					</div>
-				</div>
+    <div class="ui padded stackable fluid grid">
+		<div class="row">
+			<div class="column">
+				<h3 id="dravion-ro-header" class="ui center aligned icon header">
+					<img id="logo-image" class="ui image" src="images/DvRO-overlay.gif">
+					<div class="content">Web Guide</div>
+				</h3>
 			</div>
 		</div>
-		<!-- END OF TOP MENU/TITLE -->
 
-		<!-- NAVIGATION SEGMENT -->
-		<div id="navigation-segment" class="ui bottom attached segment">
-			<!-- NAVIGATION BAR -->
-			<div id="navigation-bar" class="ui top attached labeled icon compact center aligned fluid menu">
-				<a id="information" class="item" onClick="navigationShow(this.id)">
-					<em data-emoji=":information_source:" class="small"></em>
-					<span class="ui sub header">Information</span>
-				</a>
-				<a id="feature" class="item" onClick="navigationShow(this.id)">
-					<em data-emoji=":sparkles:" class="small"></em>
-					<span class="ui sub header">Features</span>
-				</a>
-				<a id="guide" class="item" onClick="navigationShow(this.id)">
-					<em data-emoji=":blue_book:" class="small"></em>
-					<span class="ui sub header">Guides</span>
-				</a>
-				<a id="download" class="item" onClick="navigationShow(this.id)">
-					<em data-emoji=":file_folder:" class="small"></em>
-					<span class="ui sub header">Downloads</span>
-				</a>
-				<a id="faq" class="item" data-info="faq-iframe.html" onClick="linkAccess(this.getAttribute('data-info'))">
-					<em data-emoji=":question:" class="small"></em>
-					<span class="ui sub header">FAQ</span>
-				</a>
-			</div>
-			<!-- END OF NAVIGATION BAR -->
-
-			<!-- NAVIGATION MODAL -->
-			<div id="navigation-modal" class="ui mini modal">
-				<!-- INFORMATION LINKS -->
-				<div id="information-links" class="ui divided link list">
-					<a class="item" data-info="about-iframe.html" onClick="linkAccess(this.getAttribute('data-info'))">
-						<h4 class="ui header"><em data-emoji=":regional_indicator_a:" class="small"></em>About</h4>
+		<div class="row">
+			<div class="column">
+				<!-- NAVIGATION BAR -->
+				<div id="navigation-bar" class="ui labeled icon center aligned compact fluid five item menu">
+					<a id="information" class="item" onClick="navigationShow(this.id)">
+						<em data-emoji=":information_source:" class="small"></em>
+						<span class="ui text">INFORMATION</span>
 					</a>
-					<a class="item" data-info="changelog-iframe.html" onClick="linkAccess(this.getAttribute('data-info'))">
-						<h4 class="ui header"><em data-emoji=":bookmark:" class="small"></em>Changelog</h4>
+					<a id="feature" class="item" onClick="navigationShow(this.id)">
+						<em data-emoji=":sparkles:" class="small"></em>
+						<span class="ui text">FEATURES</span>
 					</a>
-					<a class="item" data-info="server-information-iframe.html" onClick="linkAccess(this.getAttribute('data-info'))">
-						<h4 class="ui header"><em data-emoji=":scroll:" class="small"></em>Server Information</h4>
+					<a id="guide" class="item" onClick="navigationShow(this.id)">
+						<em data-emoji=":bookmark:" class="small"></em>
+						<span class="ui text">GUIDES</span>
 					</a>
-					<a class="item" data-info="commands-iframe.html" onClick="linkAccess(this.getAttribute('data-info'))">
-						<h4 class="ui header"><em data-emoji=":keyboard:" class="small"></em>Commands</h4>
+					<a id="download" class="item" onClick="navigationShow(this.id)">
+						<em data-emoji=":link:" class="small"></em>
+						<span class="ui text">DOWNLOADS</span>
+					</a>
+					<a id="faq" class="item" data-info="faq-iframe.html" onClick="linkAccess(this.getAttribute('data-info'))">
+						<em data-emoji=":question:" class="small"></em>
+						<span class="ui text">FAQ</span>
 					</a>
 				</div>
-				<!-- END OF INFORMATION LINKS -->
+				<!-- END OF NAVIGATION BAR -->
 
-				<!-- FEATURE LINKS -->
-				<div id="feature-links" class="ui divided link list">
-					<a class="item" data-info="events-iframe.html" onClick="linkAccess(this.getAttribute('data-info'))">
-						<h4 class="ui header"><em data-emoji=":partying_face:" class="small"></em>Events</h4>
-					</a>
-					<a class="item" data-info="fishing-system-iframe.html" onClick="linkAccess(this.getAttribute('data-info'))">
-						<h4 class="ui header"><em data-emoji=":fishing_pole_and_fish:" class="small"></em>Fishing System</h4>
-					</a>
-					<a class="item" data-info="gold-room-iframe.html" onClick="linkAccess(this.getAttribute('data-info'))">
-						<h4 class="ui header"><em data-emoji=":baby_chick:" class="small"></em>Gold Room</h4>
-					</a>
-					<a class="item" data-info="lottery-draw-iframe.html" onClick="linkAccess(this.getAttribute('data-info'))">
-						<h4 class="ui header"><em data-emoji=":tickets:" class="small"></em>Lottery Draw</h4>
-					</a>
-					<a class="item" data-info="gear-enchant-iframe.html" onClick="linkAccess(this.getAttribute('data-info'))">
-						<h4 class="ui header"><em data-emoji=":ring:" class="small"></em>Gear Enchant</h4>
-					</a>
-					<a class="item" data-info="costume-enchant-iframe.html" onClick="linkAccess(this.getAttribute('data-info'))">
-						<h4 class="ui header"><em data-emoji=":clown:" class="small"></em>Costume Enchant</h4>
-					</a>
-					<a class="item" data-info="world-boss-iframe.html" onClick="linkAccess(this.getAttribute('data-info'))">
-						<h4 class="ui header"><em data-emoji=":skull_crossbones:" class="small"></em>World Boss</h4>
-					</a>
-					<a class="item" data-info="world-mission-iframe.html" onClick="linkAccess(this.getAttribute('data-info'))">
-						<h4 class="ui header"><em data-emoji=":gun:" class="small"></em>World Mission</h4>
-					</a>
-					<a class="item" data-info="refine-bonus-iframe.html" onClick="linkAccess(this.getAttribute('data-info'))">
-						<h4 class="ui header"><em data-emoji=":hammer_pick:" class="small"></em>Refine Bonus</h4>
-					</a>
-					<a class="item" data-info="costume-color-change-iframe.html" onClick="linkAccess(this.getAttribute('data-info'))">
-						<h4 class="ui header"><em data-emoji=":rainbow_flag:" class="small"></em>Costume Color Change</h4>
-					</a>
-					<a class="item" data-info="pvp-on-maintown-iframe.html" onClick="linkAccess(this.getAttribute('data-info'))">
-						<h4 class="ui header"><em data-emoji=":vs:" class="small"></em>PVP on Maintown</h4>
-					</a>
-					<a class="item" data-info="edited-cards-iframe.html" onClick="linkAccess(this.getAttribute('data-info'))">
-						<h4 class="ui header"><em data-emoji=":card_box:" class="small"></em>Edited Cards</h4>
-					</a>
-					<a class="item" data-info="rmt-iframe.html" onClick="linkAccess(this.getAttribute('data-info'))">
-						<h4 class="ui header"><em data-emoji=":moneybag:" class="small"></em>Real Money Trading</h4>
-					</a>
-					<a class="item" data-info="vvip-level-system-iframe.html" onClick="linkAccess(this.getAttribute('data-info'))">
-						<h4 class="ui header"><em data-emoji=":arrow_heading_up:" class="small"></em>V-VIP Level System</h4>
-					</a>
+				<!-- NAVIGATION MODAL -->
+				<div id="navigation-modal" class="ui modal">
+					<div class="scrolling content">
+						<!-- INFORMATION LINKS -->
+						<div id="information-links" class="ui divided link list">
+							<a class="item" data-info="about-iframe.html" onClick="linkAccess(this.getAttribute('data-info'))">
+								<h4 class="ui header"><span class="ui text"><em data-emoji=":regional_indicator_a:" class="small"></em>About</span></h4>
+							</a>
+							<a class="item" data-info="changelog-iframe.html" onClick="linkAccess(this.getAttribute('data-info'))">
+								<h4 class="ui header"><span class="ui text"><em data-emoji=":bookmark:" class="small"></em>Changelog</span></h4>
+							</a>
+							<a class="item" data-info="server-information-iframe.html" onClick="linkAccess(this.getAttribute('data-info'))">
+								<h4 class="ui header"><span class="ui text"><em data-emoji=":scroll:" class="small"></em>Server Information</span></h4>
+							</a>
+							<a class="item" data-info="commands-iframe.html" onClick="linkAccess(this.getAttribute('data-info'))">
+								<h4 class="ui header"><span class="ui text"><em data-emoji=":keyboard:" class="small"></em>Commands</span></h4>
+							</a>
+						</div>
+						<!-- END OF INFORMATION LINKS -->
+
+						<!-- FEATURE LINKS -->
+						<div id="feature-links" class="ui divided link list">
+							<a class="item" data-info="events-iframe.html" onClick="linkAccess(this.getAttribute('data-info'))">
+								<h4 class="ui header"><span class="ui text"><em data-emoji=":tada:" class="small"></em>Events</span></h4>
+							</a>
+							<a class="item" data-info="fishing-system-iframe.html" onClick="linkAccess(this.getAttribute('data-info'))">
+								<h4 class="ui header"><span class="ui text"><em data-emoji=":fishing_pole_and_fish:" class="small"></em>Fishing System</span></h4>
+							</a>
+							<a class="item" data-info="gold-room-iframe.html" onClick="linkAccess(this.getAttribute('data-info'))">
+								<h4 class="ui header"><span class="ui text"><em data-emoji=":coin:" class="small"></em>Gold Room</span></h4>
+							</a>
+							<a class="item" data-info="lottery-draw-iframe.html" onClick="linkAccess(this.getAttribute('data-info'))">
+								<h4 class="ui header"><span class="ui text"><em data-emoji=":tickets:" class="small"></em>Lottery Draw</span></h4>
+							</a>
+							<a class="item" data-info="gear-enchant-iframe.html" onClick="linkAccess(this.getAttribute('data-info'))">
+								<h4 class="ui header"><span class="ui text"><em data-emoji=":ring:" class="small"></em>Gear Enchant</span></h4>
+							</a>
+							<a class="item" data-info="costume-enchant-iframe.html" onClick="linkAccess(this.getAttribute('data-info'))">
+								<h4 class="ui header"><span class="ui text"><em data-emoji=":dolls:" class="small"></em>Costume Enchant</span></h4>
+							</a>
+							<a class="item" data-info="world-boss-iframe.html" onClick="linkAccess(this.getAttribute('data-info'))">
+								<h4 class="ui header"><span class="ui text"><em data-emoji=":skull_crossbones:" class="small"></em>World Boss</span></h4>
+							</a>
+							<a class="item" data-info="world-mission-iframe.html" onClick="linkAccess(this.getAttribute('data-info'))">
+								<h4 class="ui header"><span class="ui text"><em data-emoji=":clipboard:" class="small"></em>World Mission</span></h4>
+							</a>
+							<a class="item" data-info="refine-bonus-iframe.html" onClick="linkAccess(this.getAttribute('data-info'))">
+								<h4 class="ui header"><span class="ui text"><em data-emoji=":hammer_pick:" class="small"></em>Refine Bonus</span></h4>
+							</a>
+							<a class="item" data-info="costume-color-change-iframe.html" onClick="linkAccess(this.getAttribute('data-info'))">
+								<h4 class="ui header"><span class="ui text"><em data-emoji=":rainbow_flag:" class="small"></em>Costume Color Change</span></h4>
+							</a>
+							<a class="item" data-info="pvp-on-maintown-iframe.html" onClick="linkAccess(this.getAttribute('data-info'))">
+								<h4 class="ui header"><span class="ui text"><em data-emoji=":vs:" class="small"></em>PVP on Maintown</span></h4>
+							</a>
+							<a class="item" data-info="edited-cards-iframe.html" onClick="linkAccess(this.getAttribute('data-info'))">
+								<h4 class="ui header"><span class="ui text"><em data-emoji=":card_box:" class="small"></em>Edited Cards</span></h4>
+							</a>
+							<a class="item" data-info="rmt-iframe.html" onClick="linkAccess(this.getAttribute('data-info'))">
+								<h4 class="ui header"><span class="ui text"><em data-emoji=":moneybag:" class="small"></em>Real Money Trading</span></h4>
+							</a>
+							<a class="item" data-info="vvip-level-system-iframe.html" onClick="linkAccess(this.getAttribute('data-info'))">
+								<h4 class="ui header"><span class="ui text"><em data-emoji=":arrow_heading_up:" class="small"></em>V-VIP Level System</span></h4>
+							</a>
+						</div>
+						<!-- END OF FEATURE LINKS -->
+
+						<!-- GUIDE LINKS -->
+						<div id="guide-links" class="ui divided link list">
+							<a class="item" data-info="newbie-guide-iframe.html" onClick="linkAccess(this.getAttribute('data-info'))">
+								<h4 class="ui header"><span class="ui text"><em data-emoji=":new:" class="small"></em>Newbie Guide</span></h4>
+							</a>
+							<a class="item" data-info="gold-room-farm-guide-iframe.html" onClick="linkAccess(this.getAttribute('data-info'))">
+								<h4 class="ui header"><span class="ui text"><em data-emoji=":orange_book:" class="small"></em>Gold Room Farm Guide</span></h4>
+							</a>
+							<a class="item" data-info="mvp-farm-guide-iframe.html" onClick="linkAccess(this.getAttribute('data-info'))">
+								<h4 class="ui header"><span class="ui text"><em data-emoji=":space_invader:" class="small"></em>MVP Farm Guide</span></h4>
+							</a>
+						</div>
+						<!-- END OF GUIDE LINKS -->
+
+						<!-- DOWNLOAD LINKS -->
+						<div id="download-links" class="ui divided link list">
+							<a href="https://drive.google.com/file/d/1QEHeEb-jAeG0LuhDBlBaGudMfrPFOkAE/view?usp=sharing" class="item" target="_blank">
+								<h4 class="ui header"><span class="ui text"><em data-emoji=":regional_indicator_g:" class="small"></em>Google Drive Installer</span></h4>
+							</a>
+							<a href="https://www.mediafire.com/file/fdnpzlo4p2y8uf3/DravionRO+Official+Installer+v1.62526.rar/file" class="item" target="_blank">
+								<h4 class="ui header"><span class="ui text"><em data-emoji=":regional_indicator_m:" class="small"></em>MediaFire Installer</span></h4>
+							</a>
+							<a href="https://www.mediafire.com/file/joilv71g2lb127f/Dravion_4r.zip/file?fbclid=IwY2xjawSsEAhleHRuA2FlbQIxMQBzcnRjBmFwcF9pZAwzNTA2ODU1MzE3MjgAAR5KJ2LT1a2-KOx5ZmF_sqFJuAEQtIRZfQaNsLjo5psX52Q3jFMPozobu195mg_aem_CoMQS-zJxLWFKBmD6S2xgw" class="item" target="_blank">
+								<h4 class="ui header"><span class="ui text"><em data-emoji=":four:" class="small"></em>4R Tools Installer</span></h4>
+							</a>
+						</div>
+						<!-- END OF DOWNLOAD LINKS -->
+					</div>
 				</div>
-				<!-- END OF FEATURE LINKS -->
+				<!-- END OF NAVIGATION MODAL -->
 
-				<!-- GUIDE LINKS -->
-				<div id="guide-links" class="ui divided link list">
-					<a class="item" data-info="newbie-guide-iframe.html" onClick="linkAccess(this.getAttribute('data-info'))">
-						<h4 class="ui header"><em data-emoji=":baby:" class="small"></em>Newbie Guide</h4>
-					</a>
-					<a class="item" data-info="gold-farm-guide-iframe.html" onClick="linkAccess(this.getAttribute('data-info'))">
-						<h4 class="ui header"><em data-emoji=":hatching_chick:" class="small"></em>Gold Farm Guide</h4>
-					</a>
-					<a class="item" data-info="mvp-farm-guide-iframe.html" onClick="linkAccess(this.getAttribute('data-info'))">
-						<h4 class="ui header"><em data-emoji=":space_invader:" class="small"></em>MVP Farm Guide</h4>
-					</a>
-				</div>
-				<!-- END OF GUIDE LINKS -->
-
-				<!-- DOWNLOAD LINKS -->
-				<div id="download-links" class="ui divided link list">
-					<a href="https://drive.google.com/file/d/1QEHeEb-jAeG0LuhDBlBaGudMfrPFOkAE/view?usp=sharing" class="item" target="_blank">
-						<h4 class="ui header"><em data-emoji=":regional_indicator_g:" class="small"></em>Google Drive Installer</h4>
-					</a>
-					<a href="https://www.mediafire.com/file/fdnpzlo4p2y8uf3/DravionRO+Official+Installer+v1.62526.rar/file" class="item" target="_blank">
-						<h4 class="ui header"><em data-emoji=":regional_indicator_m:" class="small"></em>MediaFire Installer</h4>
-					</a>
-					<a href="https://www.mediafire.com/file/joilv71g2lb127f/Dravion_4r.zip/file?fbclid=IwY2xjawSsEAhleHRuA2FlbQIxMQBzcnRjBmFwcF9pZAwzNTA2ODU1MzE3MjgAAR5KJ2LT1a2-KOx5ZmF_sqFJuAEQtIRZfQaNsLjo5psX52Q3jFMPozobu195mg_aem_CoMQS-zJxLWFKBmD6S2xgw" class="item" target="_blank">
-						<h4 class="ui header"><em data-emoji=":four:" class="small"></em>4R Tools Installer</h4>
-					</a>
-				</div>
-				<!-- END OF DOWNLOAD LINKS -->
-			</div>
-			<!-- END OF NAVIGATION MODAL -->
-
-			<script>
-				function navigationShow(id) {
-					const selectedId = id + "-links";
-					$('.ui.modal').modal({
-						onShow: function() {
-							const nestedDivs = document.querySelectorAll('#navigation-modal div');
-							const allIds = Array.from(nestedDivs).map(div => div.id).filter(id => id !== "");
-							for(i = 0; i < allIds.length; i++) {
-								if(selectedId == allIds[i]) {
-									document.getElementById(allIds[i]).hidden = false;
-								}else{
-									document.getElementById(allIds[i]).hidden = true;
+				<script>
+					function navigationShow(id) {
+						const selectedId = id + "-links";
+						$('.ui.modal').modal({
+							onShow: function() {
+								const nestedDivs = document.querySelectorAll('#navigation-modal div');
+								const allIds = Array.from(nestedDivs).map(div => div.id).filter(id => id !== "");
+								for(i = 0; i < allIds.length; i++) {
+									if(selectedId == allIds[i]) {
+										document.getElementById(allIds[i]).hidden = false;
+									}else{
+										document.getElementById(allIds[i]).hidden = true;
+									}
 								}
 							}
-						}
-					}).modal('setting', 'transition', 'zoom').modal('show');
-				}
+						}).modal('setting', 'transition', 'zoom').modal('show');
+					}
 
-				function linkAccess(data) {
-					document.getElementById('iframe-container-computer').src = data;
-					document.getElementById('iframe-container-mobile').src = data;
-					$('.ui.modal').modal('hide');
-				}
-			</script>
+					function linkAccess(data) {
+						document.getElementById('iframe-container-computer').src = data;
+						document.getElementById('iframe-container-mobile').src = data;
+						$('.ui.modal').modal('hide');
+					}
+				</script>
+				
+				<div class="ui padded stackable fluid grid">
+					<div class="row">
+						<div class="computer only three wide column"></div>
 
-			<div class="body-segment ui bottom attached segment">
-				<div class="ui stackable fluid grid">
-					<div class="computer only three wide column"></div>
+						<div class="body-container computer only ten wide column">
+							<iframe id="iframe-container-computer" src="about-iframe.html" frameborder="0" onload="resizeIframe(this)"></iframe>
+						</div>
 
-					<div class="body-container computer only ten wide column">
-						<iframe id="iframe-container-computer" src="about-iframe.html" frameborder="0"></iframe>
+						<div class="body-container mobile tablet only sixteen wide column">
+							<iframe id="iframe-container-mobile" src="about-iframe.html" frameborder="0" onload="resizeIframe(this)"></iframe>
+						</div>
+
+						<script>
+							function resizeIframe(iframe) {
+								// Read the scrollHeight of the inner body and apply it to the iframe height
+								iframe.style.height = iframe.contentWindow.document.body.scrollHeight + 'px';
+							}
+						</script>
+
+						<div class="computer only three wide column"></div>
 					</div>
-
-					<div class="body-container mobile tablet only sixteen wide column">
-						<iframe id="iframe-container-mobile" src="about-iframe.html" frameborder="0"></iframe>
-					</div>
-
-					<div class="computer only three wide column"></div>
 				</div>
 			</div>
 		</div>
-		<!-- END OF NAVIGATION SEGMENT-->
 	</div>
 </body>
 <script>
 $(document).ready(function() {
+	const viewportWidth  = window.innerWidth;
 	
+	if(viewportWidth >= 992) {
+		document.getElementById('navigation-modal').classList.add('tiny');
+		document.getElementById('navigation-modal').classList.remove('massive');
+
+		document.getElementById('navigation-bar').classList.add('tiny');
+		document.getElementById('navigation-bar').classList.remove('massive');
+	}else {
+		document.getElementById('navigation-modal').classList.add('massive');
+		document.getElementById('navigation-modal').classList.remove('tiny');
+
+		document.getElementById('navigation-bar').classList.add('massive');
+		document.getElementById('navigation-bar').classList.remove('tiny');
+	}
 });
 </script>

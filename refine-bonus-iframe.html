@@ -19,47 +19,82 @@
 <style>
 	@font-face {
 		font-family: headerFont;
-		src: url(ArtineBold-nA4d4.ttf);
+		src: url(fonts/PoppinsMedium-1JPv.otf);
 	}
-	.ui.huge.header {
+	@font-face {
+		font-family: textFont;
+		src: url(fonts/PoppinsRegular-B2Bw.otf);
+	}
+	h2 span, h4 span, th, div.title span {
 		font-family: headerFont;
+	}
+	p, td, div.description span {
+		font-family: textFont;
+	}
+	/* This is for PC only */
+	@media only screen and (min-width: 992px) {
+		p, th, td, div.title span, div.description span {
+			font-size: 1rem;
+		}
+	}
+	/* This is for Mobile and Tablet only */
+	@media only screen and (max-width: 991px) {
+		p, th, td, div.title span, div.description span, h4 span {
+			font-size: 1.5rem;
+		}
+		h2 span {
+			font-size: 2.5rem;
+		}
+	}
+	body {
+		background-color: transparent;
+	}
+	thead {
+		background-color: #f8ffff;
+	}
+	tbody {
+		background-color: white;
 	}
 </style>
 <body>
     <div class="ui padded stackable grid">
 		<div class="row">
 			<div class="column">
-				<h2 class="ui huge header"><em data-emoji=":hammer_pick:" class="small"></em>Refine Bonus</h2>
+				<h2 class="ui header"><span class="ui text"><em data-emoji=":hammer_pick:" class="small"></em>Refine Bonus</span></h2>
+			</div>
+		</div>
 
+		<div class="row">
+			<div class="column">
 				<div class="ui floating info message">
 					<p>This page contains information about <b>Refine Bonus</b>.</p>
 				</div>
 
-				<h4 class="ui top attached header"><em data-emoji=":question:" class="small"></em>HOW IT WORKS?</h4>
-				<div class="ui attached segment">
-					<div class="ui circular ordered stackable steps">
+				<h4 class="ui top attached header"><span class="ui text"><em data-emoji=":question:" class="small"></em>HOW IT WORKS?</span></h4>
+				<div class="ui attached raised segment">
+					<div class="ui stackable fluid circular four steps">
 						<div class="step">
 							<div class="content">
-								<div class="title"><em data-emoji=":hammer:" class="small"></em>Refine</div>
-								<div class="description">Weapon & Armor Set</div>
+								<div class="title"><span class="ui text">Refine</span></div>
+								<div class="description"><span class="ui text">Weapon & Armor Set</span></div>
 							</div>
 						</div>
 						<div class="step">
 							<div class="content">
-								<div class="title"><em data-emoji=":eight:" class="small"></em>+8 Refine</div>
-								<div class="description">+8 Bonus Activate</div>
+								<div class="title"><span class="ui text">+8 Refine</span></div>
+								<div class="description"><span class="ui text">+8 Bonus Activate</span></div>
 							</div>
 						</div>
 						<div class="step">
 							<div class="content">
-								<div class="title"><em data-emoji=":nine:" class="small"></em>+9 Refine</div>
-								<div class="description">+9 Bonus Activate</div>
+								<div class="title"><span class="ui text">+9 Refine</span></div>
+								<div class="description"><span class="ui text">+9 Bonus Activate</span></div>
 							</div>
 						</div>
 						<div class="step">
 							<div class="content">
-								<div class="title"><em data-emoji=":keycap_ten:" class="small"></em>+10 Refine</div>
-								<div class="description">+10 Bonus Activate</div>
+								<div class="title"><span class="ui text">+10 Refine</span></div>
+								<div class="description"><span class="ui text">+10 Bonus Activate</span></div>
 							</div>
 						</div>
 					</div>
@@ -178,5 +213,18 @@
 </body>
 <script>
 $(document).ready(function() {
+	const viewportWidth  = window.innerWidth;
+
+	if(viewportWidth >= 992) {
+		const uiLabel = document.querySelectorAll(".ui.label");
+		uiLabel.forEach(element => {
+			element.classList.remove('massive');
+		});
+	}else {
+		const uiLabel = document.querySelectorAll(".ui.label");
+		uiLabel.forEach(element => {
+			element.classList.add('big');
+		});
+	}
 });
 </script>

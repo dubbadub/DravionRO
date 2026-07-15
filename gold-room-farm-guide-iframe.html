@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <meta charset="ISO-8859-1">
+
+    <title>Gold Farm Guide</title>
+	<link rel="icon" type="image/x-icon" href="logo.png">
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/fomantic-ui@2.9.4/dist/semantic.min.css">
+
+	<script src="https://cdn.jsdelivr.net/npm/fomantic-ui@2.9.4/dist/semantic.min.js"></script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+
+	<script src="https://cdn.jsdelivr.net/npm/chart.js@3.0.0/dist/chart.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
+</html>
+<style>
+	@font-face {
+		font-family: headerFont;
+		src: url(fonts/PoppinsMedium-1JPv.otf);
+	}
+	@font-face {
+		font-family: subHeaderFont;
+		src: url(fonts/PoppinsRegular-B2Bw.otf);
+	}
+	@font-face {
+		font-family: textFont;
+		src: url(fonts/PoppinsLight-l4Zw.otf);
+	}
+	#page-header, h2 {
+		font-family: headerFont;
+	}
+	p {
+		font-family: textFont;
+	}
+	/* This is for PC only */
+	@media only screen and (min-width: 992px) {
+		p {
+			font-size: 1.3em;
+		}
+	}
+	/* This is for Mobile and Tablet only */
+	@media only screen and (max-width: 991px) {
+		p {
+			font-size: 1.5em;
+		}
+	}
+</style>
+<body>
+    <div class="ui padded stackable grid">
+		<div class="row">
+			<div class="column">
+				<h2 id="page-header" class="ui huge header"><em data-emoji=":orange_book:" class="small"></em><span class="ui text">Gold Farm Guide</span></h2>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="column">
+				<div class="ui floating info message">
+					<p>This page contains information about <b>Gold Farm Guide</b>.</p>
+				</div>
+
+				<div class="ui fluid placeholder">
+					<div class="paragraph">
+						<div class="line"></div>
+						<div class="line"></div>
+						<div class="line"></div>
+						<div class="line"></div>
+						<div class="line"></div>
+						<div class="line"></div>
+						<div class="line"></div>
+						<div class="line"></div>
+						<div class="line"></div>
+						<div class="line"></div>
+					</div>
+					<div class="paragraph">
+						<div class="ui floating yellow center aligned massive message">
+							<div id="progress-message"><h2>This page is still under development</h2></div>
+						</div>
+					</div>
+					<div class="paragraph">
+						<div class="line"></div>
+						<div class="line"></div>
+						<div class="line"></div>
+						<div class="line"></div>
+						<div class="line"></div>
+						<div class="line"></div>
+						<div class="line"></div>
+						<div class="line"></div>
+						<div class="line"></div>
+						<div class="line"></div>
+						<div class="line"></div>
+						<div class="line"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+<script>
+$(document).ready(function() {
+	$('#progress-message').transition({
+		animation : 'pulse',
+		duration  : 2000
+	}).transition('set looping');
+
+	const viewportWidth  = window.innerWidth;
+	
+	if(viewportWidth >= 992) {
+		document.querySelector("#page-header span").classList.add('medium');
+		document.querySelector("#page-header span").classList.remove('large');
+	}else {
+		document.querySelector("#page-header span").classList.add('large');
+		document.querySelector("#page-header span").classList.remove('medium');
+	}
+});
+</script>

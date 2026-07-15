@@ -19,47 +19,76 @@
 <style>
 	@font-face {
 		font-family: headerFont;
-		src: url(ArtineBold-nA4d4.ttf);
+		src: url(fonts/PoppinsMedium-1JPv.otf);
 	}
-	.ui.huge.header {
+	@font-face {
+		font-family: textFont;
+		src: url(fonts/PoppinsRegular-B2Bw.otf);
+	}
+	h2 span, h4 span, div.title span {
 		font-family: headerFont;
+	}
+	p, div.description span {
+		font-family: textFont;
+	}
+	/* This is for PC only */
+	@media only screen and (min-width: 992px) {
+		p, div.title span, div.description span {
+			font-size: 1rem;
+		}
+	}
+	/* This is for Mobile and Tablet only */
+	@media only screen and (max-width: 991px) {
+		p, div.title span, div.description span, h4 span {
+			font-size: 1.5rem;
+		}
+		h2 span {
+			font-size: 2.5rem;
+		}
+	}
+	body {
+		background-color: transparent;
 	}
 </style>
 <body>
     <div class="ui padded stackable grid">
 		<div class="row">
 			<div class="column">
-				<h2 class="ui huge header"><em data-emoji=":rainbow_flag:" class="small"></em>Costume Color Change</h2>
+				<h2 class="ui header"><span class="ui text"><em data-emoji=":rainbow_flag:" class="small"></em>Costume Color Change</span></h2>
+			</div>
+		</div>
 
+		<div class="row">
+			<div class="column">
 				<div class="ui floating info message">
 					<p>This page contains information about <b>Costume Color Change</b>.</p>
 				</div>
 
-				<h4 class="ui top attached header"><em data-emoji=":question:" class="small"></em>HOW IT WORKS?</h4>
-				<div class="ui attached segment">
-					<div class="ui circular ordered stackable steps">
+				<h4 class="ui top attached header"><span class="ui text"><em data-emoji=":question:" class="small"></em>HOW IT WORKS?</span></h4>
+				<div class="ui attached raised segment">
+					<div class="ui stackable fluid circular four ordered steps">
 						<div class="step">
 							<div class="content">
-								<div class="title"><em data-emoji=":octagonal_sign:" class="small"></em>Equipped</div>
-								<div class="description">1 costume at a time</div>
+								<div class="title"><span class="ui text">Equipped</span></div>
+								<div class="description"><span class="ui text">1 costume at a time</span></div>
 							</div>
 						</div>
 						<div class="step">
 							<div class="content">
-								<div class="title"><em data-emoji=":speech_balloon:" class="small"></em>Command</div>
-								<div class="description">@colorchange</div>
+								<div class="title"><span class="ui text">Command</span></div>
+								<div class="description"><span class="ui text">@colorchange</span></div>
 							</div>
 						</div>
 						<div class="step">
 							<div class="content">
-								<div class="title"><em data-emoji=":rainbow:" class="small"></em>Choose</div>
-								<div class="description">Choose your prefered color</div>
+								<div class="title"><span class="ui text">Choose</span></div>
+								<div class="description"><span class="ui text">Choose your prefered color</span></div>
 							</div>
 						</div>
 						<div class="step">
 							<div class="content">
-								<div class="title"><em data-emoji=":ballot_box_with_check:" class="small"></em>Color Changed</div>
-								<div class="description">Color change base on your prefered color</div>
+								<div class="title"><span class="ui text">Color Changed</span></div>
+								<div class="description"><span class="ui text">Color change base on your prefered color</span></div>
 							</div>
 						</div>
 					</div>
